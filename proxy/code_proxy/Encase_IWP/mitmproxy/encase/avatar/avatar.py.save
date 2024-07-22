@@ -1,0 +1,58 @@
+"""
+This script injects a Javascript to the .
+"""
+from mitmproxy import http
+from mitmproxy import ctx
+from selenium import webdriver
+from bs4 import BeautifulSoup
+from vars import *
+
+def load(l):
+    l.add_option("fb_url", str, " ", "A custom option")
+
+def response(flow: http.HTTPFlow) -> None:
+   customfb = ctx.options.fb_url
+   customfb = "https:--www.facebook.com-"+customfb
+   #print(customfb)
+   myreflect = "<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js'></script><script src='"+js_vars+"vars.js'></script><script> var fb_url='"+customfb+"';</script><script src='"+js_vars+"gr/avatar.js'></script><link rel='stylesheet' type='text/css' href='"+js_vars+"gr/avatar.css'></head>"
+   if flow.request.host == "www.facebook.com":
+      #print('face')
+      flow.response.headers[
+            "Content-Security-Policy"] = "script-src https://upload.facebook.com/* *.facebook.com *.fbcdn.net *.facebook.net *.jquery.com *.jsdelivr.net *.cloudflare.com https://encase-proxy.socialcomputing.eu https://encase-proxy.socialcomputing.eu:* https://encase-proxy.socialcomputing.eu:8090/*https://encase-backend.socialcomputing.eu:* *.google-analytics.com *.virtualearth.net *.google.com 127.0.0.1:* *.spotilocal.com:* 'unsafe-inline' 'unsafe-eval' *.atlassolutions.com blob: data: 'self'"
+      reflector = b""+myreflect.encode()
+      flow.response.content = flow.response.content.replace(b"</head>", reflector)
+
+   elif flow.request.host == "twitter.com":
+#    flow.response.headers["Content-Security-Policy"] ="connect-src 'self' blob: https://*.giphy.com https://*.pscp.tv https://*.video.pscp.tv https://*.twimg.com https://api.twitter.com https://caps.twitter.com https://media.riffsy.com https://pay.twitter.com https://sentry.io https://ton.twitter.com https://twitter.com https://upload.twitter.com https://www.google-analytics.com https://app.link https://api2.branch.io https://bnc.lt https://vmap.snappytv.com https://vmapstage.snappytv.com https://vmaprel.snappytv.com https://vmap.grabyo.com https://mdhdsnappytv-vh.akamaihd.net https://mpdhdsnappytv-vh.akamaihd.net https://mmdhdsnappytv-vh.akamaihd.net https://smdhdsnappytv-vh.akamaihd.net https://smpdhdsnappytv-vh.akamaihd.net https://smmdhdsnappytv-vh.akamaihd.net https://rmdhdsnappytv-vh.akamaihd.net https://rmpdhdsnappytv-vh.akamaihd.net https://rmmdhdsnappytv-vh.akamaihd.net https://dwo3ckksxlb0v.cloudfront.net ; default-src 'self'; form-action 'self' https://twitter.com https://*.twitter.com; font-src 'self' https://*.twimg.com; frame-src 'self' https://twitter.com https://mobile.twitter.com https://pay.twitter.com https://cards-frame.twitter.com ; img-src 'self' blob: data: https://*.cdn.twitter.com https://ton.twitter.com https://*.twimg.com https://www.google-analytics.com https://www.periscope.tv https://www.pscp.tv https://media.riffsy.com https://*.giphy.com https://*.pscp.tv; manifest-src 'self'; media-src 'self' blob: https://twitter.com https://*.twimg.com https://*.vine.co https://*.pscp.tv https://*.video.pscp.tv https://*.giphy.com https://media.riffsy.com https://mdhdsnappytv-vh.akamaihd.net https://mpdhdsnappytv-vh.akamaihd.net https://mmdhdsnappytv-vh.akamaihd.net https://smdhdsnappytv-vh.akamaihd.net https://smpdhdsnappytv-vh.akamaihd.net https://smmdhdsnappytv-vh.akamaihd.net https://rmdhdsnappytv-vh.akamaihd.net https://rmpdhdsnappytv-vh.akamaihd.net https://rmmdhdsnappytv-vh.akamaihd.net https://dwo3ckksxlb0v.cloudfront.net; object-src 'none'; https://*.twimg.com   https://www.google-analytics.com https://twitter.com https://app.link  'nonce-Y2I2OTkwMWItNzYxNS00OTE2LWEwN2ItZGQ2OWFhMWVhNGFj'; style-src 'self' 'unsafe-inline' https://*.twimg.com; worker-src 'self' blob:; *.jquery.com *.jsdelivr.net *.cloudflare.com  https://encase-proxy.socialcomputing.eu:* https://encase-proxy.socialcomputing.eu:8090/* https://encase-backend.socialcomputing.eu:*"
+#    flow.response.headers["Content-Security-Policy"] = "default-src *  data: blob: filesystem: about: ws: wss: 'unsafe-inline' 'unsafe-eval' 'unsafe-dynamic'; script-src * data: blob: 'unsafe-inline' 'unsafe-eval'; connect-src * data: blob: 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src * data: blob: ; style-src * data: blob: 'unsafe-inline'; font-src * data: blob: 'unsafe-inline';"
+    if "/i/" not in flow.request.pretty_url:
+      if not flow.request.pretty_url.endswith('.js'):
+        if not flow.request.pretty_url.endswith('.json'):
+          if flow.request.pretty_url.startswith("https://twitter.com/"):   
+          #  new_headers = flow.response.headers["Content-Security-Policy"] + "; script-src 'self' *.cloudflare.com https://encase-proxy.socialcomputing.eu:8090/*"
+          #  flow.response.headers[
+          #        "Content-Security-Policy"] = new_headers
+          #  print(flow.response.headers["Content-Security-Policy"])
+            csr = flow.response.headers["Content-Security-Policy"]
+            new_csr = csr.split(";")
+            new_csr[0] = new_csr[0]+" https://encase-proxy.socialcomputing.eu:* https://encase-proxy.socialcomputing.eu:8090/* https://encase-backend.socialcomputing.eu:* *.jquery.com *.jsdelivr.net *.cloudflare.com"
+            new_csr[9] = new_csr[9].replace("'unsafe-inline'", "'unsafe-inline' https://encase-proxy.socialcomputing.eu:* https://encase-proxy.socialcomputing.eu:8090/* https://encase-backend.socialcomputing.eu:* *.jquery.com *.jsdelivr.net *.cloudflare.com")
+            new_csr[10] =new_csr[10]+ " https://encase-proxy.socialcomputing.eu:* *.jquery.com *.jsdelivr.net *.cloudflare.com"
+            new_csr[5] = new_csr[5]+ " https://encase-proxy.socialcomputing.eu:*"
+            final_csr=';'.join(new_csr)
+            flow.response.headers["Content-Security-Policy"] = final_csr
+            flow.response.headers["Access-Control-Allow-Headers"] = "*"
+            twitter_reflect = "<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous' nonce></script><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js'></script><script src='"+js_vars+"vars.js'></script><script> var fb_url='"+customfb+"';</script><script src='"+js_vars+"gr/avatar.js'></script><link rel='stylesheet' type='text/css' href='"+js_vars+"gr/avatar.css'><body>"
+            reflector = b""+myreflect.encode()
+            twitter_reflector = b""+twitter_reflect.encode()
+            flow.response.content = flow.response.content.replace(b"<body>", twitter_reflector)
+   else:
+    #flow.response.headers[
+    #      "Content-Security-Policy"] = "default-src * 'unsafe-inline' 'unsafe-eval' script-src * 'unsafe-inline' 'unsafe-eval' connect-src * 'unsafe-inline' img-src * data: blob: 'unsafe-inline' frame-src * style-src * 'unsafe-inline'"
+    flow.response.headers[
+          "Content-Security-Policy"] = "default-src *  data: blob: filesystem: about: ws: wss: 'unsafe-inline' 'unsafe-eval' 'unsafe-dynamic'; script-src * data: blob: 'unsafe-inline' 'unsafe-eval'; connect-src * data: blob: 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src * data: blob: ; style-src * data: blob: 'unsafe-inline'; font-src * data: blob: 'unsafe-inline';"
+    flow.response.headers["Access-Control-Allow-Headers"] = "*"
+    reflector = b""+myreflect.encode()
+    flow.response.content = flow.response.content.replace(b"</head>", reflector)
+
+

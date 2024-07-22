@@ -1,0 +1,21 @@
+@relation test_model
+
+@attribute numHashtags numeric
+@attribute numUpperCases numeric
+@attribute numUrls numeric
+@attribute sentimentScore numeric
+@attribute cntFollowers numeric
+@attribute cntFriends numeric
+@attribute followers2friends numeric
+@attribute diffInDays numeric
+@attribute cntLists numeric
+@attribute cntPosts numeric
+@attribute cntAdjective numeric
+@attribute cntAdverbs numeric
+@attribute cntVerbs numeric
+@attribute meanWordsPerSentence numeric
+@attribute meanWordLength numeric
+@attribute class {normal,spam,aggressive,bully}
+
+@data
+0.47368421052631576,0.05263157894736842,1.105263157894737,0.15789473684210525,9589180.0,94.0,102012.55319148937,4280,5527,79209,1,1,17,12.789473684210526,8.500517898853811,?
