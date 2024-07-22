@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"encaseproxydata.chat"}],"uuid":"1a662a5362aa4c15b15a7b727f121ae8"}
