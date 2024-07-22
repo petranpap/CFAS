@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"encaseproxydata.FB_Source"}],"uuid":"1bacf4e53ca94b38a74ec8819a31d0e4"}

@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"encaseproxydata.social_media_settings"}],"uuid":"68f863f934264cff9678d480f29ca350"}

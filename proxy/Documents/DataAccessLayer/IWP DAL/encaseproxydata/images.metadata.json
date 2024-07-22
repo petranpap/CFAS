@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"encaseproxydata.images"}],"uuid":"14879746d5624f7180ec1387a2594b40"}
