@@ -1,0 +1,64 @@
+{
+    "module_no": "A1",
+    "title": "Personal / Sensitive Data and Privacy",
+    "level": "intermediate",
+    "prerequisites": [
+        "A1-foundation"
+    ],
+    "learning_objectives": [
+        "Learn about the purpose of setting up cookies and role of cookies to enhance user experience on a website.",
+        "Learn to check for and decline third-party cookies",
+        "Understand that cookies are reversible"
+    ],
+    "main_messages": [
+        "Websites can track the users' behaviors using cookies",
+        "Do not accept all the cookies",
+        " Users can manage their cookies through their browsers settings"
+    ],
+    "questions": [
+        "Do they know what cookies are?",
+        "What are the benefits of cookies?",
+        "What is the bad thing about cookies?"
+    ],
+    "practical_examples": [
+        {
+            "text": "Open a website for the first time and explore the cookie notice with the students",
+            "links": []
+        },
+        {
+            "text": "Visit a browser and set the cookie settings",
+            "links": [
+                {
+                    "text": "Clear, enable, and manage cookies in Chrome - Computer",
+                    "link": "https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop"
+                }
+            ]
+        },
+        {
+            "text": "Managing Cookie Settings in Your Browser Article - dummies",
+            "link": "https://www.dummies.com/article/technology/internet-basics/defining-and-dealing-with-web-cookies-200521/"
+        }
+    ],
+    "resources": [
+        {
+            "text": "Should you accept cookies? 5 times you definitely shouldn’t | Norton",
+            "link": "https://us.norton.com/internetsecurity-privacy-should-i-accept-cookies.html"
+        },
+        {
+            "text": "Cookies: What Do They Do? - Free Privacy Policy",
+            "link": "https://www.freeprivacypolicy.com/blog/cookies/"
+        },
+        {
+            "text": "AllAboutCookies.org4",
+            "link": "https://allaboutcookies.org/"
+        },
+        {
+            "text": "How Browser Cookies Help You",
+            "link": "https://youtu.be/x5Gv8aY5y8U"
+        },
+        {
+            "text": "A Complete Guide to Web Tracking (and How to Avoid It)",
+            "link": "https://www.avast.com/c-web-tracking"
+        }
+    ]
+}

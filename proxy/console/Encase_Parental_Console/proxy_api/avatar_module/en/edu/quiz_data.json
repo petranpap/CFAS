@@ -1,0 +1,1083 @@
+{
+    "quiz_sections": [
+        {
+            "module": "A1",
+            "title": "Personal / Sensitive Data and Privacy",
+            "questions": [
+                {
+                    "question": "Which of the following is/ or contains personal data?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Address, Phone number, Passwords"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "A picture of a place I visited"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "All the above"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "If someone sends you the personal information of another person, what do you do?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "I share the information with other people."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "I tell the sender that what he/she does is wrong."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "I report that incident to someone with the authority to do something."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "What is a digital footprint?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "The biometrics I use to access my device"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "The online information about you on the internet based on your online activities"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "The information about you, that you have in your online profiles."
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "When I visit a website,",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "I accept all the cookies"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "I accept the necessary cookies"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "I check what data the cookies collect and then accept"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "The cookies are used to harm the online users,",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Sometimes cookies can be harmful to the user."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "True"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "False"
+                        }
+                    ],
+                    "correct_option_id": "A1",
+                    "difficulty-level": "hard"
+                }
+            ]
+        },
+        {
+            "module": "A2",
+            "title": "Cyberbullying & Sexual harassment",
+            "questions": [
+                {
+                    "question": "Sharing a picture of someone with a sexual meaning-related message is considered sexual harassment.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Yes"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "No"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Not always, only if the picture contains sexual content"
+                        }
+                    ],
+                    "correct_option_id": "A1",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "You received online a funny picture of a classmate of yours. What do you do?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "You share it with others."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "You ignore it."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "You report the incidence."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Someone (the sender) sent a nude photo of him/herself to another person (the receiver), and this person shared this photo with others. Who did a mistake?,",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "The sender"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "The receiver"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Both"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "Bullying is a violation of the terms of service of websites and provides functionalities (report/block) to defend it.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Yes, all websites"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "Yes, all the reputable websites"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Bullying officially does not violate any terms of service"
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "medium"
+                }
+            ]
+        },
+        {
+            "module": "A3",
+            "title": "Inappropriate content",
+            "questions": [
+                {
+                    "question": "Which of the following is inappropriate? <br>A.violent, sexual,<br>B.hateful, extremist",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "A"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "B"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A and B"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Sharing inappropriate content is",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "illegal"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "harmful."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Both"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Which of those is illegal?<br>A. Post inappropriate content on Social Platforms <br> B. Share with others inappropriate content through instant communication applications (i.e., chats)<br>C.Download inappropriate content",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "A"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "A and B"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A, B and C"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "How to be protected from inappropriate content?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Use the relevant settings online platforms have"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "Report or block such content"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Both"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                }
+            ]
+        },
+        {
+            "module": "A4",
+            "title": "Hate-speech",
+            "questions": [
+                {
+                    "question": "Hate-speech is",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "when someone curses someone else"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "when you tell your classmate, you hate him/her because you don’t like each other"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "expressing hate towards a person or a group of people for their beliefs, sexual orientation, ethnicity, etc."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Hatespeech grave dangers for the cohesion of:<br>A. a democratic society<br>B. the protection of human rights<br>C. the rule of law",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "A and C"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "B and C"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A, B, and C"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Hatespeech is difficult to be detected from reputable online platforms because…",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "They don’t have the technology"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "They will lose the interest of the users"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Users use different forms of text, images, and videos to express hatespeech for different topics"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "Platforms can take down all posts that contain a negative opinion about a group of people",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Yes, this is okay"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "No, this might violate human rights – freedom of expression"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "No, platforms cannot say which posts contain a negative opinion about a group of people"
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "medium"
+                }
+            ]
+        },
+        {
+            "module": "A5",
+            "title": "Fake profiles, Fraud, Phishing",
+            "questions": [
+                {
+                    "question": "When you receive an email from an unknown sender, what do you do?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "You open the email right ahead"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "You delete the email right ahead"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "You check the sender’s address, the theme, and whether there is an attachment. If it looks safe, you open the email."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "You receive a friend request of a friend that you already follow, what do you do?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Accept the request, I know this person"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "I check the profile to verify this is my friend and if not, I decline the request"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "I check the profile, I ask my friend about the new profile. If it is fake, I block and report the profile"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "How to detect a fake profile?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "from the profile picture"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "from the interaction with other accounts"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "both of the above"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "What is phishing?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "When someone is trying to get information about you with malicious incentives"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "When someone attacks your email"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "When a fake profile requests to follow your profile"
+                        }
+                    ],
+                    "correct_option_id": "A1",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "WYou receive an email that asks you to click on a link to do something, when you click on the link, it opens a new tab/window and asks you to log in to your social media account, what do you do?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "I put in my credentials to check what they ask me to do"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "I check if the service page context looks familiar (e.g., the login page looks like the Facebook login page), and if yes, I give my credentials"
+                        },
+                        {
+                            "id": "A3",
+                            "text": ". I don’t click on the link, I first check the email address of the sender"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "hard"
+                }
+            ]
+        },
+        {
+            "module": "A6",
+            "title": "The importance of strong passwords",
+            "questions": [
+                {
+                    "question": "When it comes to create a password for an online account you choose:",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "I put in my credentials to check what they ask me to do"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "A long and complex password ( e.g., a3Jh2!dDD* )"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A piece of personal information (e.g., birthdate, address, phone)"
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Who knows your passwords?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Only me (or my parents/guardians)"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "My best friend(s)"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "I give my password to people when I need them to help me with something and never change it afterwards"
+                        }
+                    ],
+                    "correct_option_id": "A1",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "What is a brute force attack?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Utilizing millions of combinations of characters as a password to guess a password."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "An attacker force you to give him your password"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Some who know you the best try to guess your password by checking a few possible passwords"
+                        }
+                    ],
+                    "correct_option_id": "A1",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "Why are services asking you to have special characters and numbers to your password?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "To have a longer password"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "To encourage you not to use common words as your password"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "To increase the combination of characters, an attacker needs to try to guess your password"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "Biometrics (i.e., face recognition) as an authentication method can be hacked.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "True, someone who looks like me can gain access to my device."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "True, some can hack the database where my biometrics are stored."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "False, no one can hack biometrics."
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "hard"
+                }
+            ]
+        },
+        {
+            "module": "A7",
+            "title": "Addiction",
+            "questions": [
+                {
+                    "question": "Addiction to online application is not a real problem.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "True, it is only something adults are afraid of because of their children spend a lot of time online"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "True, other addictions are more important"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "False, it can cause devastating long-term mental health effects"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Which of the following are signs of online addiction?<br>A. Someone spend a great part of the day online, on a daily base<br>B. Someone check their phone with no reason repeatedly<br>C. Someone feels bad if they stay offline for a “long time”<br>D. Someone drop plans with friends to stay home and be online with no interuptions",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "A and C"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "C"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A, B, C and D"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "The design of online applications aims to…",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "drive users addicted"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "engage more users"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "help users not to be addicted"
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "Which of those can be used to overcome addiction?<br>A. Disable application notifications<br>B. Turn of your device for part of the day<br>C. Spend more time outside the house with other people",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "B"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "B and C"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A, B, and C"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                }
+            ]
+        },
+        {
+            "module": "A8",
+            "title": "Keep my online account safe",
+            "questions": [
+                {
+                    "question": "Setting a strong password is enough to protect my account from attacks.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Yes, no one can guess my password"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "Yes, it is very difficult for someone to guess my password."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "No, there are other settings I can apply to protect my account"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Two-factor authentication is",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "when the platform asks for my username first, and then my password"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "when I give my credentials, and then I need to verify with another step that it is me who accesses the service"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "when I need to log in through another account (i.e. Google account) to access an online service"
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Setting the appropriate application safety settings online is enough to be safe",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Yes, the applications offer full protection"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "Yes, there is nothing else I can do to stay safe"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "No, users must be skeptical when being online"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "The default privacy and security settings of the online applications, offer the maximum security the application can offer to the user",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "True, users should allways use the default settings"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "False, there are settings that are “hidden” from the users so they stay unprotected"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "False, users should always check all the available settings, and get the maximum safety they can."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                }
+            ]
+        },
+        {
+            "module": "A9",
+            "title": "Stay safe on online social networks",
+            "questions": [
+                {
+                    "question": "It is safe to accept friend requests from:<br>A. People I know in person<br>B. Friends of friends<br> C. Famous people<br> D. Strangers",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "A and B"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "A, B, and C"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A, B, C, and D"
+                        }
+                    ],
+                    "correct_option_id": "A1",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Sharing a story post of my holiday time is safe.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Yes, I always do that"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "Yes, I hide my location so it is safe"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "No, it is better to add the stories when I am already gone"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "If someone I met online insists to share my pictures with him/her",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "I share my pictures, nothing bad can happen"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "I ignore these messages"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "I report and block this person and share that incident with a trusted adult"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "When you see inappropriate content in your feed",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "I ignore it"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "I report and block content"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "I share it with other users"
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "medium"
+                }
+            ]
+        },
+        {
+            "module": "A10",
+            "title": "Stay safe on online social networks",
+            "questions": [
+                {
+                    "question": "Which online risks can occur while playing online:<br>A. Phishing<br>B. Hatespeech<br>C. Cyberbullying<br>D. Inappropriate Content exposure",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "A and D"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "B and C"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A, B, C, and D"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "If you receive an email that you won premium access to the game you play, you need to click a link to claim your prize. What do you do?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "You click on the link, to see if it is a spam"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "You click on the link, to claim the prize."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "You first check the email address of the sender and check if the email has signs of spam mail."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "The age limits for the games….",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "are not important to consider."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "are sometimes too strict, so you can decide if a game is appropriate for your age."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "are very important to follow, so your physical and mental health won’t get harmed."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "When someone you met online while playing asks you to meet, what do you do?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "If he/she is someone I play together for a long time, I will of course meet her/him."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "I will tell a friend about the meeting so someone knows where I will be, and then meet with her/him."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "I will discuss it with a trusted adult, make sure it is not a fake profile, and then decide"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                }
+            ]
+        },
+        {
+            "module": "A11",
+            "title": "Fake news",
+            "questions": [
+                {
+                    "question": "Fake news can cause expression of hate towards a person or a group of people.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "True"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "False, fake news are not enough for causing that."
+                        },
+                        {
+                            "id": "A3",
+                            "text": ". False, fake news are like pranks to have fun with friends"
+                        }
+                    ],
+                    "correct_option_id": "A1",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "Fake news is an important problem because their creators aim to:<br>A. Help people have fun. <br>B. Cause panic, disagreements<br>C. Make people change their opinions",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "A and B"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "B and C"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A, B, and C"
+                        }
+                    ],
+                    "correct_option_id": "A2",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "When you come across news that you believe is fake. What do you do?<br>A. Check the source<br>B. Check other sources<br>C. Check the author<br>D. Check the comments<br>E. If your friends, and family believe the story, then it is not fake news.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "A and B"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "A, B, C, and E"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "A, B, C, and D"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "You can ……. trust fact-checking tools to identify fake news.",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Always"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "Never"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Sometimes. If the news are fresh then maybe there is no available information, then you need to be critical."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "How fake accounts are involved in the distribution of fake news?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Fake accounts post fake news."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "Fake accounts share, comment, like fake news to create bigger impact."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Both"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "hard"
+                }
+            ]
+        },
+        {
+            "module": "A12",
+            "title": "Transparency of Recommendation Algorithms",
+            "questions": [
+                {
+                    "question": "In which platforms a recommendation algorithm is used?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "Social Platforms"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "Online Social Platforms"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Both"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "How a website decides what to recommend to the users?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "based on previous interaction with the website"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "based on your friends’ interests"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Both"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "easy"
+                },
+                {
+                    "question": "What does it mean that you are stuck online in a filter bubble",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "The platform filtered your profile, and now your profile is blocked"
+                        },
+                        {
+                            "id": "A2",
+                            "text": "In the platform you use, you only talk with the same users"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "The platform presents to you only information based on what they assume fits with your interest and views."
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "What is personalization in online platforms?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "When platforms know about your personal data."
+                        },
+                        {
+                            "id": "A2",
+                            "text": "When platforms use user information to provide content relevant to the user's interest."
+                        },
+                        {
+                            "id": "A3",
+                            "text": "Personalization is a form of cyber attack"
+                        }
+                    ],
+                    "correct_option_id": "A3",
+                    "difficulty-level": "medium"
+                },
+                {
+                    "question": "What does transparency means for recommendation algorithms?",
+                    "options": [
+                        {
+                            "id": "A1",
+                            "text": "It must be clear why a user gets a specific recommendation "
+                        },
+                        {
+                            "id": "A2",
+                            "text": "The platforms must stop using recommendation systems to protect their users' rights"
+                        },
+                        {
+                            "id": "A3",
+                            "text": "The platforms must ask users for their consent before applying the recommendation algorithms"
+                        }
+                    ],
+                    "correct_option_id": "A1",
+                    "difficulty-level": "hard"
+                }
+            ]
+        }
+    ]
+}

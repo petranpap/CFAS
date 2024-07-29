@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+
+        }
+        .header > * {
+            width: calc(100% / 2);
+        }
+
+        .header-image {
+            width: 100px; /* Adjust the image width as needed */
+            height: auto;
+            margin-right: 20px;
+            float: left;
+	padding-left: 40px;
+        }
+        .header-title {
+font-size: 24px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    float: right;
+    flex-direction: row;
+        }
+        .container {
+            display: flex;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+
+        .menu {
+            
+            background-color: #c6d9f1;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            overflow-y: auto;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            display: none;
+            overflow-y: auto;
+        }
+        .content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+    text-align: center;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 350px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+
+                .menu-button {
+            display: block;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 5px 0;
+            color: #fff;
+            cursor: pointer;
+        }
+        .menu-button-prerequisites {
+            background-color: #3498db;
+        }
+        .menu-button-learning-objectives {
+            background-color: #e74c3c;
+        }
+        .menu-button-main-messages {
+            background-color: #27ae60;
+        }
+        .menu-button-questions {
+            background-color: #f1c40f;
+        }
+        .menu-button-practical-example {
+            background-color: #9b59b6;
+        }
+        .menu-button-resources {
+            background-color: #e67e22;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">                
+        
+         <img class="header-image" src="https://proxyencase.cut.ac.cy:8090/proxy_api/avatar_module/en/edu/cybersafety.jpg" alt="Header Image">
+         <h2 class="header-title">A1. Personal / Sensitive Data and Privacy</h2>
+    </div>
+    <div class="container">
+
+        <div class="menu">
+            <h3>Sections</h3>
+            <ul>
+                <li><a href="#prerequisites" class="menu-button menu-button-prerequisites">Prerequisites</a></li>
+                <li><a href="#learning-objectives" class="menu-button menu-button-learning-objectives">Learning Objectives</a></li>
+                <li><a href="#main-messages" class="menu-button menu-button-main-messages">Main Messages</a></li>
+                <li><a href="#questions" class="menu-button menu-button-questions">Example Questions</a></li>
+                <li><a href="#practical-example" class="menu-button menu-button-practical-example">Practical Example</a></li>
+                <li><a href="#resources" class="menu-button menu-button-resources">Resources</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </div>
+        <div class="content ">
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="prerequisites" class="content active">
+        <h2>Prerequisites</h2>
+        <p>---</p>
+    </div>
+    <div id="learning-objectives" class="content">
+        <h2>Learning Objectives (LO)</h2>
+        <ul>
+            <li>LO1: Learn what not to share</li>
+            <li>LO2: Discover what are the consequences of sharing sensitive data</li>
+            <li>LO3: Lear about what is the digital footprint</li>
+        </ul>
+    </div>
+    <div id="main-messages" class="content">
+        <h2>Main Messages (M)</h2>
+        <ul>
+            <li>M1: Whatever goes online stays online forever</li>
+            <li>M2: Be critical for what you post online</li>
+            <li>M3: Respect your own and others’ privacy</li>
+        </ul>
+    </div>
+    <div id="questions" class="content">
+        <h2>Example Questions (Q)</h2>
+        <ul>
+            <li>Q1: What do they consider as private/sensitive data?</li>
+            <li>Q2: What are the risks when people disclose private data?</li>
+            <li>Q3: Have they ever experienced/heard about private data disclosure? Describe the incident. (When/Which application they used/What did they do?)</li>
+        </ul>
+    </div>
+    <div id="practical-example" class="content">
+        <h2>Practical Example (P)</h2>
+                - <a href="https://education.kaspersky.com/en/lesson/16/page/67">Lesson 1. The threat of personal data leaks</a><br>
+                - <a href="https://legaljobs.io/blog/privacy-statistics/">18 Chilling Privacy Statistics in 2022</a><br>
+                - <a href="https://www.teach-nology.com/teachers/lesson_plans/interdisciplinary/1/index.html">Cyber Safety Lesson Plan</a><br>
+                - Movie: <a href="https://www.netflix.com/gr/title/80117542">The Great Hack</a><br>
+    </div>
+    <div id="resources" class="content">
+        <h2>Resources [Links]</h2>
+- <a href="https://www.nytimes.com/guides/privacy-project/how-to-protect-your-digital-privacy" > How to Protect Your Digital Privacy</a><br>
+- <a href="https://commission.europa.eu/law/law-topic/data-protection/reform/what-personal-data_en" > What is personal data?</a><br>
+- <a href="https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm" > Data protection and online privacy</a><br>
+- <a href="https://www.youtube.com/watch?v=0cUnFsePZXA" > 5 tips to protect your privacy online</a><br>
+- <a href="https://www.youtube.com/watch?v=_vrVmkYDrlE" > Microsoft shares tips on how to protect your information and privacy against cybersecurity threats</a><br>
+- <a href="https://uk.norton.com/blog/how-to/8-ways-to-protect-your-private-information-online" > 8 ways to protect your private information online</a><br>
+- <a href="https://uk.norton.com/blog/how-to/8-ways-to-protect-your-private-information-online" > What is a digital footprint? And how to protect it from hackers</a><br>
+- <a href="https://www.youtube.com/watch?v=eTTer3-RmFw" > Online safety - it is not about the internet... | Jim Gamble | TEDxStormontWomen</a><br>
+- <a href="https://www.youtube.com/watch?v=lpp8ao0uBik" > Technology and Control | Bart Preneel | TEDxPatras</a><br>
+    </div>
+
+    <!-- JavaScript to handle menu transitions -->
+    <script>
+        const menuLinks = document.querySelectorAll('.menu a');
+        const contentSections = document.querySelectorAll('.content');
+
+        menuLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                // Hide all content sections
+                contentSections.forEach((section) => {
+                    section.classList.remove('active');
+                });
+
+                // Show the selected content section
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+

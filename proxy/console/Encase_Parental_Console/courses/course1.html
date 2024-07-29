@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+
+        }
+        .header > * {
+            width: calc(100% / 2);
+        }
+
+        .header-image {
+            width: 100px; /* Adjust the image width as needed */
+            height: auto;
+            margin-right: 20px;
+padding-left: 40px;
+            float: left;
+        }
+        .header-title {
+font-size: 24px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    float: right;
+    flex-direction: row;
+        }
+        .container {
+            display: flex;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+
+        .menu {
+            
+            background-color: #c6d9f1;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            overflow-y: auto;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            display: none;
+            overflow-y: auto;
+        }
+        .content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+    text-align: center;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 350px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+
+                .menu-button {
+            display: block;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 5px 0;
+            color: #fff;
+            cursor: pointer;
+        }
+        .menu-button-prerequisites {
+            background-color: #3498db;
+        }
+        .menu-button-learning-objectives {
+            background-color: #e74c3c;
+        }
+        .menu-button-main-messages {
+            background-color: #27ae60;
+        }
+        .menu-button-questions {
+            background-color: #f1c40f;
+        }
+        .menu-button-practical-example {
+            background-color: #9b59b6;
+        }
+        .menu-button-resources {
+            background-color: #e67e22;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">                
+        
+         <img class="header-image" src="https://proxyencase.cut.ac.cy:8090/proxy_api/avatar_module/en/edu/cybersafety.jpg" alt="Header Image">
+         <h2 class="header-title">A0. Why discussing cybersafety</h2>
+    </div>
+    <div class="container">
+
+        <div class="menu">
+            <h3>Sections</h3>
+            <ul>
+                <li><a href="#prerequisites" class="menu-button menu-button-prerequisites">Prerequisites</a></li>
+                <li><a href="#learning-objectives" class="menu-button menu-button-learning-objectives">Learning Objectives</a></li>
+                <li><a href="#main-messages" class="menu-button menu-button-main-messages">Main Messages</a></li>
+                <li><a href="#questions" class="menu-button menu-button-questions">Example Questions</a></li>
+                <li><a href="#practical-example" class="menu-button menu-button-practical-example">Practical Example</a></li>
+                <li><a href="#resources" class="menu-button menu-button-resources">Resources</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </div>
+        <div class="content ">
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="prerequisites" class="content active">
+        <h2>Prerequisites</h2>
+        <p>---</p>
+    </div>
+    <div id="learning-objectives" class="content">
+        <h2>Learning Objectives (LO)</h2>
+        <ul>
+            <li>LO1: Students can define and explain what cybersafety is</li>
+            <li>LO2: Be able to list the most common online risks and understand the harm they can cause</li>
+            <li>LO3: Understand the importance of being safe, responsible, and respectful online</li>
+        </ul>
+    </div>
+    <div id="main-messages" class="content">
+        <h2>Main Messages (M)</h2>
+        <ul>
+            <li>M1: Cybersafety is important for the online user's mental and physical health</li>
+            <li>M2: Anyone, even an expert online user, can experience online risks</li>
+            <li>M3: Acting safe and responsible online is as important as acting safe and responsible in real life</li>
+        </ul>
+    </div>
+    <div id="questions" class="content">
+        <h2>Example Questions (Q)</h2>
+        <ul>
+            <li>Q1: What is Cybersafety?</li>
+            <li>Q2: List the online risks they know</li>
+            <li>Q3: Do they feel comfortable and safe with your online activities?</li>
+        </ul>
+    </div>
+    <div id="practical-example" class="content">
+        <h2>Practical Example (P)</h2>
+        <ul>
+            <li>P1: Give real statistics (time spent, ages of users, reported risks, etc.) for online activities and risks.</li>
+            <li>
+                - <a href="https://www.eukidsonline.ch/files/Eu-kids-online-2020-international-report.pdf">EU Kids Online 2020</a><br>
+                - <a href="https://legaljobs.io/blog/privacy-statistics/">18 Chilling Privacy Statistics in 2022</a><br>
+                - <a href="https://www.forbes.com/sites/tarahaelle/2017/02/28/online-risks-are-everyday-events-for-teens-but-they-rarely-tell-their-parents/?sh=431bb1f03861">Online risks are everyday events for teens-but they rarely tell their parents</a><br>
+                - <a href="https://www.youtube.com/watch?v=uquRzrcwA18">The Dangers of the Internet</a><br>
+                - <a href="https://www.youtube.com/watch?v=DiI8Lj0_TGQ">Teen Voices: Who You're Talking to Online</a><br>
+            </li>
+        </ul>
+    </div>
+    <div id="resources" class="content">
+        <h2>Resources [Links]</h2>
+        <ul>
+            - <a href="https://www.youtube.com/watch?v=yrln8nyVBLU">Safe Web Surfing: Top Tips for Kids and Teens Online</a><br>
+            - <a href="https://www.youtube.com/watch?v=hV1sigh6WKA">How to be safe online, from a young person | Aurelia Torkington</a><br>
+            - <a href="https://www.youtube.com/watch?v=Czg_9C7gw0o">Is Social Media Hurting Your Mental Health? | Bailey Parnel</a><br>
+            - <a href="https://www.youtube.com/watch?v=iVTuAS_DE5A">Cyber Safety Week Lesson Resources</a><br>
+            - <a href="https://www.youtube.com/watch?v=RnHOFlaxQtI">Helping young people manage their online identity | Internet Matters</a><br>
+            - <a href="https://www.internetmatters.org/digital-family-toolkit/#explore-further">My Family’s Digital Toolkit</a><br>
+        </ul>
+    </div>
+
+    <!-- JavaScript to handle menu transitions -->
+    <script>
+        const menuLinks = document.querySelectorAll('.menu a');
+        const contentSections = document.querySelectorAll('.content');
+
+        menuLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                // Hide all content sections
+                contentSections.forEach((section) => {
+                    section.classList.remove('active');
+                });
+
+                // Show the selected content section
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+

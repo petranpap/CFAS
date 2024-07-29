@@ -1,0 +1,82 @@
+{
+    "module_no": "A0",
+    "title": "Why discussing cybersafety",
+    "level": "foundation",
+    "prerequisites": [],
+    "learning_objectives": [
+        "Students can define and explain what is cybersafety",
+        "Be able to list the most common online risks and understands the harm they can cause",
+        "Understand the importance of being safe, responsible, respectful online"
+    ],
+    "main_messages": [
+        "Cybersafety is important for the online user's mental&physical health",
+        "Anyone, even an expert online user can experience online risks",
+        "Acting safe and responsible online is as important as acting safe and responsible in real life"
+    ],
+    "questions": [
+        "What is Cybersafety?",
+        "List the online risks they know",
+        "Do they feel comfortable and safe with your online activities?"
+    ],
+    "practical_examples": [
+        {
+            "text": "Give real statistics (time spent, ages of users, reported risks, etc.) for online activities and risks.",
+            "links": [
+                {
+                    "text": "EU Kids Online 2020",
+                    "link": "https://www.eukidsonline.ch/files/Eu-kids-online-2020-international-report.pdf"
+                },
+                {
+                    "text": "18 Chilling Privacy Statistics in 2022",
+                    "link": "https://legaljobs.io/blog/privacy-statistics/"
+                },
+                {
+                    "text": "Online risks are everyday events for teens-but they rarely tell their parents",
+                    "link": "https://www.forbes.com/sites/tarahaelle/2017/02/28/online-risks-are-everyday-events-for-teens-but-they-rarely-tell-their-parents/?sh=431bb1f03861"
+                },
+                {
+                    "text": "The Dangers of the Internet",
+                    "link": "https://www.youtube.com/watch?v=uquRzrcwA18"
+                },
+                {
+                    "text": "Teen Voices: Who You're Talking to Online",
+                    "link": "https: //www.youtube.com/watch?v=DiI8Lj0_TGQ"
+                }
+            ]
+        }
+    ],
+    "resources": [
+        {
+            "text": "Safe Web Surfing: Top Tips for Kids and Teens Online",
+            "link": "https://www.youtube.com/watch?v=yrln8nyVBLU&ab_channel=watchwellcast"
+        },
+        {
+            "text": "How to be safe online, from a young person | Aurelia Torkington",
+            "link": "https://www.youtube.com/watch?v=hV1sigh6WKA&ab_channel=TEDxTalks"
+        },
+        {
+            "text": "Is Social Media Hurting Your Mental Health? | Bailey Parnel",
+            "link": "https://www.youtube.com/watch?v=Czg_9C7gw0o&ab_channel=TEDxTalks"
+        },
+        {
+            "text": "Cyber Safety Week Lesson Resources",
+            "link": "https://www.youtube.com/watch?v=iVTuAS_DE5A"
+        },
+        {
+            "text": "Staying safe online",
+            "link": "https://www.youtube.com/watch?v=EyQeUwqCDWg"
+        },
+        {
+            "text": "What is digital literacy?",
+            "link": "https://www.youtube.com/watch?v=_LElWqXi7Ag&list=PLcetZ6gSk9682A7ZAZq2s9IqB-y8Ng63e"
+        },
+        {
+            "text": "Helping young people manage their online identity | Internet Matters",
+            "link": "https://www.youtube.com/watch?v=RnHOFlaxQtI"
+        },
+        {
+            "text": "My Family's Digital Toolkit",
+            "link": "https: //www.internetmatters.org/digital-family-toolkit/#explore-further"
+        }
+    ]
+}

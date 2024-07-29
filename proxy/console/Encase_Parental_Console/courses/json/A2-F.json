@@ -1,0 +1,93 @@
+{
+    "module_no": "A2",
+    "title": "Cyberbullying and Sexual Harassment",
+    "level": "foundation",
+    "prerequisites": [
+        "A1-foundation"
+    ],
+    "learning_objectives": [
+        "Learn to detect signs of cyberbullying and online sexual harassment",
+        "Understand the importance of reporting such incidences to a trusted adult",
+        "Learn how to support the victim and not the predator"
+    ],
+    "main_messages": [
+        "No cyberbullying or sexual harassment is accepted",
+        "Cyberbully and Sexual Harassment are illegal",
+        "It is not a shame to report being a victim of cyberbullying or sexual harassment"
+    ],
+    "questions": [
+        "What is cyberbullying?",
+        "What is sexual harassment?",
+        "Share experiences they had or heard about"
+    ],
+    "practical_examples": [
+        {
+            "text": "Sexual harassment",
+            "links": [
+                {
+                    "text": "Emily's Story - Online Grooming",
+                    "link": "https://www.youtube.com/watch?v=GOsgQbmvuUQ&ab_channel=ThinkUKnowAUS"
+                },
+                {
+                    "text": "Online Sexual Abuse Can Happen",
+                    "link": "https://www.youtube.com/watch?v=CEivufW2IWs&ab_channel=FightChildAbuse"
+                }
+            ]
+        },
+        {
+            "text": "Cyberbullying",
+            "links": [
+                {
+                    "text": "Is it Cyberbullying?",
+                    "link": "https://www.youtube.com/watch?v=vtfMzmkYp9E&ab_channel=StopBullyingGov"
+                },
+                {
+                    "text": "Heart-Breaking Cyberbullying Statistics for 2022",
+                    "link": "https://dataprot.net/statistics/cyberbullying-statistics/"
+                }
+            ]
+        },
+        {
+            "text": "Movies: Bully; Audrie and Daisy (16+); Submit the documentary",
+            "links": []
+        }
+    ],
+    "resources": [
+        {
+            "text": "Cyberbullying among young people",
+            "link": "https://www.europarl.europa.eu/RegData/etudes/STUD/2016/571367/IPOL_STU(2016)571367_EN.pdf"
+        },
+        {
+            "text": "Quiz for cyberbullying",
+            "link": "https://www.childnet.com/resources/step-up-speak-up/teaching-toolkit/quiz/"
+        },
+        {
+            "text": "Bullying and advice on coping and making it stop",
+            "link": "https://www.childline.org.uk/info-advice/bullying-abuse-safety/types-bullying/"
+        },
+        {
+            "text": "What is Cyberbullying, its bad effects and how to stop it ",
+            "link": "https://www.iberdrola.com/social-commitment/cyberbullying-definition-effects-and-solutions"
+        },
+        {
+            "text": "Peer to peer sexual harassment",
+            "link": "https://www.childnet.com/resources/step-up-speak-up/teaching-toolkit/films/"
+        },
+        {
+            "text": "Lesson Plans to address sexual harassment",
+            "link": "https://www.childnet.com/resources/step-up-speak-up/teaching-toolkit/step-up-speak-up-lesson-plans/"
+        },
+        {
+            "text": "Digital Predators | Full Episode | Dateline",
+            "link": "https://www.youtube.com/watch?v=RnKlo0EjAqc&ab_channel=SBSDateline"
+        },
+        {
+            "text": "Online Predators",
+            "link": "https://www.infosecawareness.in/concept/children/online-predators"
+        },
+        {
+            "text": "Bad Behavior Online: Bullying, Trolling & Free Speech | Off Book | PBS Digital Studios",
+            "link": "https://www.youtube.com/watch?v=RVSAFhTjAdc"
+        }
+    ]
+}

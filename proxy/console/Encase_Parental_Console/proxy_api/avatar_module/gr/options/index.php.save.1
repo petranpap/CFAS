@@ -1,0 +1,228 @@
+<?php
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+$fb_url= $_GET['fb_url'];
+
+if(isset($_POST['SubmitButton'])){ //check if form was submitted
+
+$imagePath = $_POST['inputText'];
+$newPath = "../avatars/selectedavatar/";
+43$ext = '.jpg';
+$newName  = $newPath."a".$ext;
+
+$copied = copy($imagePath , $newName);
+
+if ((!$copied)) 
+{
+print_r($copied);
+    echo "Error : Not Copied";
+}
+else
+{ 
+    echo "Copied Successful";
+}
+}    
+
+?>
+<!DOCTYPE html>
+<body class="options_page" style="
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#1e73be));
+">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Options</title>
+    <link rel="stylesheet" type="text/css" href="../css/options.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style>
+.selected{
+ border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+}
+</style>
+
+</head>
+
+<body class="options_page">
+    <!-- <script type="text/javascript" src="javascripts/cga.js"></script> -->
+    <div id="wrapper">
+        <div id="header">
+             <img src="https://encase.socialcomputing.eu/wp-content/uploads/2017/07/image1-1.png" alt="ENCASE" style="
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+">
+        </div>
+        <!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+  <div class="modal-dialog cascading-modal" role="document" style=" max-width: 700px; ">
+    <!--Content-->
+    <div class="modal-content">
+
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#info" role="tab"><i class="far fa-eye"></i>
+            Πληροφορίες</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#show" role="tab"><i class="far fa-eye"></i>
+              Προβολή</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#edit" role="tab" id="edit_"><i class="fas fa-edit"></i>
+              Eπεξεργασία</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+            <!--info-->
+          <div class="tab-pane fade in show active" id="info" role="tabpanel">
+           
+
+            <!--Body-->
+            <div class="modal-body mb-1" id="modal_info">
+               <p>Έαν ανεβάσεις μια φωτογραφία το Cybersafety Family Advice Suite αυτόματα την κρυπτογραφεί. Στις επόμενες καρτέλες μπορείς να δεις ποιοί θα βλέπουν τις φωτογραφίες σου αποκρυπτογραφημένες και να προσθέσεις ή να αφαιρέσεις κάποιον, με το FACEBOOK URL του.</p>
+               <img src="../images/get_fb_url.jpg" style="width: 90%">
+
+
+            
+            </div>
+          
+
+          </div>
+          <!--/.info-->
+
+          <!--Show-->
+          <div class="tab-pane fade in " id="show" role="tabpanel">
+        
+
+            <!--Body-->
+            <div class="modal-body mb-1" id="modal_show">
+
+            
+            </div>
+          
+
+          </div>
+          <!--/.Show-->
+
+          <!--Edit-->
+          <div class="tab-pane fade" id="edit" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body" id="modal_edit">
+             
+
+            </div>
+        
+          </div>
+          <!--/.Edit-->
+        </div>
+
+      </div>
+    </div>
+    <!-- /.Content-->
+  </div>
+</div>
+<!--Modal: Login / Register Form-->
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header"<div class="modal-header" style="
+    background: white;
+    color: black;
+">
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+<?php
+$dirname = "../avatars/";
+$images = glob($dirname."*.png");
+
+foreach($images as $key=>$image) {
+    echo '<img src="'.$image.'" style="height: 50px; border-radius: 50%;" />';
+if ($key==4){
+echo '<br>';
+}
+}
+?>
+
+        </div>
+        <div class="modal-footer"<div class="modal-header" style="
+    background: white;
+    color: black;
+">
+<form action="" method="post">
+<?php echo $message; ?>
+<input id="inputText" type="text" name="inputText" style="display:none"/>
+  <input class="btn btn-default" id="SubmitButton" type="submit" name="SubmitButton"/>
+</form>    
+ <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<div class="text-center">
+  <a href="" data-toggle="modal" data-target="#modalLRForm" id="myBtn"><button type="button" class="btn btn-primary">Επέλεξε ποιός θα μπορεί να βλέπει τις φωτογραφίες σου </button>
+</a>
+ <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style=" background: #56af50; ">Διάλεξε το avatar σου</button>
+
+</div>
+
+
+        <div id="options">
+            <fieldset id="format">
+                <h1 style=" border-bottom: 1px solid; ">Επέλεξε τι θα βλέπει ο γονέας </h1>
+                <p id="parental"></p>
+               </fieldset>
+           <fieldset id="format">
+                <h1 style=" border-bottom: 1px solid; ">Επέλεξε τι θα βλέπει το σύστημα</h1>
+                <p id="backend"></p>
+               </fieldset>
+            <fieldset>
+             <fieldset id="format">
+                <h1 style=" border-bottom: 1px solid; ">Επιλογές Κυβερνασφάλειας</h1>
+                <p id="security"></p>
+               </fieldset>
+    </div>
+
+</body>
+
+  <script src="../js/popper.min.js"></script> 
+     <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/vars.js"></script>
+<script type="text/javascript">var fb_url = "<?= $fb_url ?>";</script>
+<script src="../js/options.js"></script>
+<script>
+$(document).ready(function(){
+  $("img").click(function(){
+    $(this).addClass("selected");
+        $("img").not($(this)).removeClass('selected');
+  });
+$("img").click(function() {
+$('#inputText').val($(".selected").attr('src'));
+
+ 
+        });
+});
+</script>
+
+</html>

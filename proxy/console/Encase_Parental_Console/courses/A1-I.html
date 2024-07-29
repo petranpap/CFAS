@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+
+        }
+        .header > * {
+            width: calc(100% / 2);
+        }
+
+        .header-image {
+width: 100px;
+    height: auto;
+    margin-right: 20px;
+    padding-left: 40px;
+    float: left;
+        }
+        .header-title {
+font-size: 24px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    float: right;
+    flex-direction: row;
+        }
+        .container {
+            display: flex;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+
+        .menu {
+            
+            background-color: #c6d9f1;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            overflow-y: auto;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            display: none;
+            overflow-y: auto;
+        }
+        .content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+    text-align: center;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 350px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+
+                .menu-button {
+            display: block;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 5px 0;
+            color: #fff;
+            cursor: pointer;
+        }
+        .menu-button-prerequisites {
+            background-color: #3498db;
+        }
+        .menu-button-learning-objectives {
+            background-color: #e74c3c;
+        }
+        .menu-button-main-messages {
+            background-color: #27ae60;
+        }
+        .menu-button-questions {
+            background-color: #f1c40f;
+        }
+        .menu-button-practical-example {
+            background-color: #9b59b6;
+        }
+        .menu-button-resources {
+            background-color: #e67e22;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js'></script><script src='https://proxyencase.cut.ac.cy:8090/proxy_api/js/vars.js'></script><script> var fb_url='https:--www.facebook.com-peter.encase';</script><script src='https://proxyencase.cut.ac.cy:8090/proxy_api/js/gr/avatar.js'></script><link rel='stylesheet' type='text/css' href='https://proxyencase.cut.ac.cy:8090/proxy_api/js/gr/avatar.css'></head>
+<body>
+    <div class="header">                
+        
+<img class="header-image" src="https://proxyencase.cut.ac.cy:8090/proxy_api/avatar_module/en/edu/cybersafety.jpg" alt="Header Image">
+         <h2 class="header-title">A1. Personal / Sensitive Data and Privacy - Intermediate</h2>
+    </div>
+    <div class="container">
+
+        <div class="menu">
+            <h3>Sections</h3>
+            <ul>
+                <li><a href="#prerequisites" class="menu-button menu-button-prerequisites">Prerequisites</a></li>
+                <li><a href="#learning-objectives" class="menu-button menu-button-learning-objectives">Learning Objectives</a></li>
+                <li><a href="#main-messages" class="menu-button menu-button-main-messages">Main Messages</a></li>
+                <li><a href="#questions" class="menu-button menu-button-questions">Example Questions</a></li>
+                <li><a href="#practical-example" class="menu-button menu-button-practical-example">Practical Example</a></li>
+                <li><a href="#resources" class="menu-button menu-button-resources">Resources</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </div>
+        <div class="content ">
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="prerequisites" class="content active">
+        <h2>Prerequisites</h2>
+        <p>A1-F</p>
+    </div>
+    <div id="learning-objectives" class="content">
+        <h2>Learning Objectives (LO)</h2>
+        <ul>
+            <li>LO1: Learn about the purpose of setting up cookies and role of cookies to enhance user experience on a website.</li>
+            <li>LO2: Learn to check for and decline third-party cookies</li>
+            <li>LO3: Understand that cookies are reversible</li>
+        </ul>
+    </div>
+    <div id="main-messages" class="content">
+        <h2>Main Messages (M)</h2>
+        <ul>
+            <li>M1: Websites can track the users' behaviors using cookies</li>
+            <li>M2: Do not accept all the cookies</li>
+            <li>M3: Users can manage their cookies through their browsers settings</li>
+        </ul>
+    </div>
+    <div id="questions" class="content">
+        <h2>Example Questions (Q)</h2>
+        <ul>
+            <li>Q1: Do they know what cookies are?</li>
+            <li>Q2: What are the benefits of cookies?</li>
+            <li>Q3: What is the bad thing about cookies?</li>
+        </ul>
+    </div>
+    <div id="practical-example" class="content">
+        <h2>Practical Example (P)</h2>
+        <ul>
+            <li>P1: Open a website for the first time and explore the cookie notice with the students</li>
+	     <li>P2: Visit a browser and set the cookie settings - <a href="https://support.google.com/chrome/answer/95647?hl=en&co=GENIE.Platform%3DDesktop" target="_blank"> Clear, enable, and manage cookies in Chrome - Computer</a></li>
+	     <li>P3: <a href="https://www.dummies.com/article/technology/internet-basics/defining-and-dealing-with-web-cookies-200521/" target="_blank"> Managing Cookie Settings in Your Browser Article - dummies</a></li>
+        </ul>
+    </div>
+    <div id="resources" class="content">
+        <h2>Resources [Links]</h2>
+        <ul>
+            - <a href="https://us.norton.com/internetsecurity-privacy-should-i-accept-cookies.html" target='_blank'>Should you accept cookies? 5 times you definitely shouldn’t | Norton</a><br>
+
+            - <a href=" Cookies: What Do They Do? - Free Privacy Policy" target='_blank'> What is personal data?</a><br>
+            - <a href="https://allaboutcookies.org/"> AllAboutCookies.org</a><br>
+            - <a href="https://youtu.be/x5Gv8aY5y8U">How Browser Cookies Help You</a><br>
+            - <a href="https://www.avast.com/c-web-tracking" target='_blank'>A Complete Guide to Web Tracking (and How to Avoid It)45</a><br>
+        </ul>
+    </div>
+
+    <!-- JavaScript to handle menu transitions -->
+    <script>
+        const menuLinks = document.querySelectorAll('.menu a');
+        const contentSections = document.querySelectorAll('.content');
+
+        menuLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                // Hide all content sections
+                contentSections.forEach((section) => {
+                    section.classList.remove('active');
+                });
+
+                // Show the selected content section
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+

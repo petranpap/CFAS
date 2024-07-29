@@ -1,0 +1,73 @@
+{
+    "module_no": "A1",
+    "title": "Personal / Sensitive Data and Privacy",
+    "level": "foundation",
+    "prerequisites": [],
+    "learning_objectives": [
+        "Learn what not to share",
+        "Discover what are the consequences of sharing sensitive data",
+        "Learn about what is the digital footprint"
+    ],
+    "main_messages": [
+        "Whatever goes online stays online forever",
+        "Be critical for what you post online",
+        "Respect your own and others’ privacy"
+    ],
+    "questions": [
+        "What do they consider as private/sensitive data?",
+        "What are the risks when people disclose private data?",
+        "Have they ever experienced/heard about private data disclosure? Describe the incident. (When/Which application they used/What did they do?)"
+    ],
+    "practical_examples": [
+        {
+            "text": "Lesson 1. The threat of personal data leaks.",
+            "link": "https://education.kaspersky.com/en/lesson/16/page/67"
+        },
+        {
+            "text": "Cyber Safety Lesson Plan",
+            "link": "https://www.teach-nology.com/teachers/lesson_plans/interdisciplinary/1/index.html"
+        },
+        {
+            "text": "Movie: The Great Hack",
+            "link": "https://www.netflix.com/gr/title/80117542"
+        }
+    ],
+    "resources": [
+        {
+            "text": "How to Protect Your Digital Privacy",
+            "link": "https://www.nytimes.com/guides/privacy-project/how-to-protect-your-digital-privacy"
+        },
+        {
+            "text": "What is personal data?",
+            "link": "https://ec.europa.eu/info/law/law-topic/data-protection/reform/what-personal-data_en"
+        },
+        {
+            "text": "Data protection and online privacy",
+            "link": "https://europa.eu/youreurope/citizens/consumers/internet-telecoms/data-protection-online-privacy/index_en.htm"
+        },
+        {
+            "text": "5 tips to protect your privacy online",
+            "link": "https://www.youtube.com/watch?v=0cUnFsePZXA&ab_channel=Suncorp"
+        },
+        {
+            "text": "Microsoft shares tips on how to protect your information and privacy against cybersecurity threats",
+            "link": "https://www.youtube.com/watch?v=_vrVmkYDrlE&ab_channel=MicrosoftCloud"
+        },
+        {
+            "text": "8 ways to protect your private information online",
+            "link": "https://uk.norton.com/internetsecurity-how-to-8-ways-to-protect-your-private-information-online.html"
+        },
+        {
+            "text": "What is a digital footprint? And how to protect it from hackers",
+            "link": "https://www.kaspersky.com/resource-center/definitions/what-is-a-digital-footprint"
+        },
+        {
+            "text": "Online safety - it is not about the internet... | Jim Gamble |TEDxStormontWomen",
+            "link": "https://www.youtube.com/watch?v=eTTer3-RmFw"
+        },
+        {
+            "text": "Technology and Control | Bart Preneel | TEDxPatras",
+            "link": "https://www.youtube.com/watch?v=lpp8ao0uBik"
+        }
+    ]
+}

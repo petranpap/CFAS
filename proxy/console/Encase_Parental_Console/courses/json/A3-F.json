@@ -1,0 +1,68 @@
+{
+    "module_no": "A3",
+    "title": "Inappropriate Content",
+    "level": "foundation",
+    "prerequisites": [
+        "A1-foundation"
+    ],
+    "learning_objectives": [
+        "Learn to define the different types of inappropriate content (i.e., violent, sexual, hateful, extremist)",
+        "Understand the negative effect of inappropriate content on young people",
+        "Learn how to react to inappropriate content"
+    ],
+    "main_messages": [
+        "Exposure to inappropriate content can be dangerous for our physical and mental health",
+        "Sharing inappropriate content is illegal",
+        "Reporting and blocking content to protect ourselves and the others"
+    ],
+    "questions": [
+        "What kind of inappropriate content they can find online?",
+        "Did they find any inappropriate content online? In what applications?",
+        "What do they do when they find online inappropriate content?"
+    ],
+    "practical_examples": [
+        {
+            "text": "Teach and encourage students to report/block/hide inappropriate content they find online using the platforms settings and options",
+            "links": []
+        },
+        {
+            "text": "TikTok restricted mode in settings",
+            "links": [
+                {
+                    "text": "Is TikTok Safe for Kids? Here's What Parents Should Know",
+                    "link": "https://www.pandasecurity.com/en/mediacenter/family-safety/is-tiktok-safe-for-kids/"
+                }
+            ]
+        },
+        {
+            "text": "TECH - Here’s Facebook’s once-secret list of content that can get you banned",
+            "link": "https://www.cnbc.com/2018/04/24/facebook-content-that-gets-you-banned-according-to-community-standards.html"
+        }
+    ],
+    "resources": [
+        {
+            "text": "Inappropriate or explicit content | NSPCC",
+            "link": "https://www.nspcc.org.uk/keeping-children-safe/online-safety/inappropriate-explicit-content/"
+        },
+        {
+            "text": "Inappropriate content | Cyber Safety Pasifika",
+            "link": "https://www.cybersafetypasifika.org/stay-safe-online/inappropriate-content"
+        },
+        {
+            "text": "Inappropriate Content - Cyber Safety",
+            "link": "http://cybersafetyed.weebly.com/inappropriate-content.html"
+        },
+        {
+            "text": "Four ways to report inappropriate content online",
+            "link": "https://www.youtube.com/watch?v=iOF7TxX0Kzk&ab_channel=ThamesValleyPolice"
+        },
+        {
+            "text": "Find your local child helpline",
+            "link": "https://childhelplineinternational.org/helplines/"
+        },
+        {
+            "text": "How to protect children and teens from inappropriate content online",
+            "link": "https://www.youtube.com/watch?v=aIXhRabFJAc"
+        }
+    ]
+}

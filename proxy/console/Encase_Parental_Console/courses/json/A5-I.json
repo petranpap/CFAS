@@ -1,0 +1,55 @@
+{
+    "module_no": "A5",
+    "title": "Fake profiles, Fraud and Phishing",
+    "level": "intermediate",
+    "prerequisites": [
+        "A5-foundation"
+    ],
+    "learning_objectives": [
+        "Learn to analyze email messages to determine legitimacy",
+        "Get yourself familiar with common frauds",
+        "Learn to detect fake profiles on social media"
+    ],
+    "main_messages": [
+        "Emails can easily be forged; learn how to detect fake emails",
+        "Don’t trust offers that seem too good to be true",
+        "Fake profiles are usually easy to detect"
+    ],
+    "questions": [
+        "How would they analyze an email to see where it was really sent from?",
+        "What are the main characteristics of typical frauds?",
+        "How could they determine that the social media profile contacting them is fake?"
+    ],
+    "practical_examples": [
+        {
+            "text": "5 Ways to Detect a Phishing Email: With Examples",
+            "link": "https://www.itgovernance.co.uk/blog/5-ways-to-detect-a-phishing-email"
+        },
+        {
+            "text": "Detect Fakes",
+            "link": "https://detectfakes.media.mit.edu/"
+        }
+    ],
+    "resources": [
+        {
+            "text": "Phishing Quiz",
+            "link": "https://phishingquiz.withgoogle.com/"
+        },
+        {
+            "text": "Fake account profile quiz",
+            "link": "https://spotthetroll.org/profile/1"
+        },
+        {
+            "text": "Behind the Screen Quiz | Scam Spotter",
+            "link": "https://scamspotter.org/quiz/"
+        },
+        {
+            "text": "How to Detect Fake Profiles – Understanding Phishing",
+            "link": "https://www.cybintsolutions.com/detect-fake-profiles-phishing/"
+        },
+        {
+            "text": "How to check a suspicious e-mail sender | Kaspersky official blog",
+            "link": "https://www.kaspersky.com/blog/analyzing-mail-header/42665/"
+        }
+    ]
+}

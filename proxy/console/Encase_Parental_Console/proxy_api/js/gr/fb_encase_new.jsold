@@ -1,0 +1,475 @@
+var facereg_upload = 'reupload';
+$(window).on('load', function() {
+            for (var i = 0; i < document.querySelectorAll('[rel="theater"]').length; i++) {
+                if (document.querySelectorAll('[rel="theater"]')[i].dataset.ploi) {
+                    var fb_url;
+                    if (document.querySelectorAll('[title="Profile"]').length > 0) {
+                        var fb_url = document.querySelectorAll('[title="Profile"]')[0].href
+
+                    } else if (document.querySelectorAll('[title="Προφίλ"]').length > 0) {
+                        var fb_url = document.querySelectorAll('[title="Προφίλ"]')[0].href
+                    }
+                    fb_url = fb_url.replace(/\//g, "-");
+
+                    // console.log("11 -->  "+fb_url);
+                    var img_src = document.querySelectorAll('[rel="theater"]')[i].getElementsByTagName('img')[0].src;
+                    // console.log(img_src);
+
+                    //         console.log(data);
+                    (function(index) { // In this closure : parameters of a function in JS 
+                        // are available only in the function,
+                        // and cannot be changed from outside of it
+                        var xhr = new XMLHttpRequest(); // variables declared in a function in JS
+                        // are available only inside the function
+                        // and cannot be changed from outside of it
+
+                        xhr.upload.onprogress = function(e) {
+
+                        };
+
+                        xhr.onreadystatechange = function(e) {
+                            if (this.readyState === 4) {
+                                var obj = this.responseText;
+                                var json = JSON.parse(obj);
+                                if (json['is_racist'] == true) {
+                                    document.querySelectorAll('[rel="theater"]')[index].getElementsByTagName('img')[0].alt = ''
+                                    document.querySelectorAll('[rel="theater"]')[index].getElementsByTagName('img')[0].alt = 'Cencored By Encase'
+
+                                    document.querySelectorAll('[rel="theater"]')[index].getElementsByTagName('img')[0].src = '';
+                                    document.querySelectorAll('[rel="theater"]')[index].style = 'cursor: default'
+                                    document.querySelectorAll('[rel="theater"]')[index].style = 'pointer-events: none'
+
+
+                                }
+                            }
+                        };
+                        var data = new FormData();
+                        data.append("fb_url", fb_url);
+                        data.append("img_src", img_src); // `index` has nothing to do with `i`, now:
+                        // if `i` changes outside of the function,
+                        //`index` will not
+                        //         console.log(files[index]); // Don't keep `console.log()` in production code ;-)
+                        xhr.open('POST', host_name + '/proxy_api/php/send_img_fbfeed_to_racistMemeDetection.php');
+                        xhr.send(data);
+                    })(i)
+
+                }
+            }
+
+            document.getElementsByClassName('_3jk')[0].onclick = function() {
+                var img_alt;
+                var fb_url;
+                if (document.querySelectorAll('[title="Profile"]').length > 0) {
+                    var fb_url = document.querySelectorAll('[title="Profile"]')[0].href
+
+                } else if (document.querySelectorAll('[title="Προφίλ"]').length > 0) {
+                    var fb_url = document.querySelectorAll('[title="Προφίλ"]')[0].href
+                }
+                fb_url = fb_url.replace(/\//g, "-");
+                // console.log("11 -->  "+fb_url);
+                var refreshId = setInterval(function() {
+                    // console.log("62 -->  "+fb_url);
+                    if (document.getElementsByClassName("fbScrollableAreaContent")) {
+                        // console.log("64 -->  "+fb_url);
+                        var nodes = document.getElementById("feedx_sprouts_container").querySelectorAll('span');
+                        var first = nodes[0];
+                        var last = nodes[nodes.length - 1];
+                        var nodes_btn = document.getElementById("feedx_sprouts_container").querySelectorAll('button');
+                        var first_btn = nodes_btn[0];
+                        var last_btn = nodes_btn[nodes_btn.length - 1];
+
+                        last.innerText = 'Παρακαλώ περιμένε να ελέγξω την φωτο !';
+                        last_btn.style.backgroundColor = 'grey';
+                        last_btn.style.cursor = "not-allowed";
+                        last_btn.disabled = true;
+                    }
+                    img_alt = document.getElementById("feedx_sprouts_container").getElementsByClassName("fbScrollableAreaContent")[0].getElementsByTagName("img")[0].alt;
+                    // fb_url = document.querySelector('[title="Profile"]').href.toString();
+                    // fb_url = fb_url.replace(/\//g, '-');
+
+                    if (img_alt.includes("watermarked")) {
+                        clearInterval(refreshId);
+                        last.innerText = 'Share';
+                        last_btn.style.backgroundColor = '';
+                        last_btn.disabled = false;
+                        //console.log(img_alt);
+
+                    } else {
+                        clearInterval(refreshId);
+                        $.alert({
+                            boxWidth: '500px',
+                            useBootstrap: false,
+                            icon: 'https://encase-proxy.socialcomputing.eu:8090/proxy_api/avatar_module/avatars/selectedavatar/avatar.png',
+                            title: 'ΟΟΟps !!',
+                            content: '<img src="https://encase-proxy.socialcomputing.eu:8090/proxy_api/avatar_module/avatars/selectedavatar/avatar.png"  style="z-index: 10000; width: 50px; height: 50px; background: rgb(192, 192, 192); border: 1px solid black; border-radius: 50%;">' + document.querySelectorAll('[title="Profile"]')[0].innerText +
+                                ' Από εδώ δεν μπορώ να βοηθήσω !! Ανέβασε την στην νέα σελίδα για να δούμε τι θα κάνουμε !!',
+                            buttons: {
+                                tryAgain: {
+                                    text: 'Ok!',
+                                    btnClass: 'btn-red',
+                                    action: function() {
+                                        document.querySelector('[title="Remove photo"]').click();
+                                        document.querySelector('[aria-label="Dismiss"]').click();
+                                        location.reload();
+                                        var win = window.open(host_name + "/proxy_api/php/image_to_fb_wall_school.php?fb_url=" + fb_url, '_blank');
+                                        win.focus();
+                                    }
+                                },
+
+                            }
+
+                        });
+
+                    }
+
+                }, 1500);
+
+                // Send to Antonis clasifier
+
+
+                 var h = document.getElementById('pagelet_composer');
+                h.addEventListener("click", function(e) {
+
+                    // alert();
+                    var check = function() {
+                        if (document.querySelectorAll('[aria-autocomplete="list"].notranslate')[0]) {
+                            // run when condition is met
+
+                            var text_to_check = document.querySelectorAll('[aria-autocomplete="list"].notranslate')[0].innerText
+;
+//                              var nodes = document.getElementById("feedx_sprouts_container").querySelectorAll('span');
+//                         var first = nodes[0];
+//                         var last = nodes[nodes.length - 1];
+//                         var nodes_btn = document.getElementById("feedx_sprouts_container").querySelectorAll('button');
+//                         var first_btn = nodes_btn[0];
+//                         var last_btn = nodes_btn[nodes_btn.length - 1];
+
+//                         last.innerText = 'Παρακαλώ περιμένε!';
+// //                         last_btn.style.backgroundColor = 'grey';
+// //                         last_btn.style.cursor = "not-allowed";
+//                         last_btn.disabled = true;
+
+                            document.querySelectorAll('[role="presentation"].navigationFocus')[0].onmouseleave = function() {
+                                // alert();
+                                var data = null;
+                                var x = '';
+
+                                var xhr = new XMLHttpRequest();
+                                //xhr.withCredentials = true;
+
+                                xhr.addEventListener("readystatechange", function() {
+                                    if (this.readyState === 4) {
+                                        var myStringArray = JSON.parse(this.responseText);
+                                        // var arrayLength = myStringArray.length;
+
+                                        if (myStringArray["dates"].length > 0) {
+                                            //  console.log(myStringArray["dates"][0]);
+                                            x += myStringArray["dates"][0] + " ";
+                                        }
+                                        if (myStringArray["times"].length > 0) {
+                                            x += myStringArray["times"][0] + " ";
+                                        }
+                                        if (myStringArray["links"].length > 0) {
+                                            x += myStringArray["links"][0] + " ";
+                                        }
+                                        if (myStringArray["phones"].length > 0) {
+                                            x += myStringArray["phones"][0] + " ";
+                                        }
+                                        if (myStringArray["ext_phones"].length > 0) {
+                                            x += myStringArray["ext_phones"][0] + " ";
+                                        }
+                                        if (myStringArray["emails"].length > 0) {
+                                            x += myStringArray["emails"][0] + " ";
+                                        }
+                                        if (myStringArray["ips"].length > 0) {
+                                            x += myStringArray["ips"][0] + " ";
+                                        }
+                                        if (myStringArray["prices"].length > 0) {
+                                            x += myStringArray["prices"][0] + " ";
+                                        }
+                                        if (myStringArray["credit_cards"].length > 0) {
+                                            x += myStringArray["credit_cards"][0] + " ";
+                                        }
+                                        if (myStringArray["street_addresses"].length > 0) {
+                                            x += myStringArray["street_addresses"][0] + " ";
+                                        }
+                                        if (myStringArray["po_boxes"].length > 0) {
+                                            x += myStringArray["po_boxes"][0] + " ";
+                                        }
+                                        if (myStringArray["zip_codes"].length > 0) {
+                                            x += myStringArray["zip_codes"][0] + " ";
+                                        }
+                                        //Do something
+
+                                        if (x) {
+                                            $.confirm({
+                                                boxWidth: '500px',
+                                                useBootstrap: false,
+                                                title: 'Sensitive information detected!',
+                                                content: "Νομίζω ότι αυτό: " + x + " είναι προσωπική σου πληροφορία ! Καλύτερα να την στείλεις με μήνυμα !",
+                                                buttons: {
+                                                    post_anyway: {
+                                                        btnClass: 'btn-red',
+                                                        text: 'Post anyway',
+                                                        action: function() {
+                        //                                      last.innerText = 'Share!';
+                        // last_btn.style.backgroundColor = '#4267b2';
+                        // last_btn.style.cursor = "pointer";
+                        // last_btn.disabled = false;
+                                                            // document.querySelector('[data-testid="react-composer-post-button"]').innerText = 'Share';
+                                                            // document.querySelector('[data-testid="react-composer-post-button"]').style.backgroundColor = '#4267b2';
+                                                            // document.querySelector('[data-testid="react-composer-post-button"]').disabled = false;
+                                                            // Send Notification to parent
+                                                            var fb_url;
+                                                            if (document.querySelectorAll('[title="Profile"]').length > 0) {
+                                                                var fb_url = document.querySelectorAll('[title="Profile"]')[0].href
+
+                                                            } else if (document.querySelectorAll('[title="Προφίλ"]').length > 0) {
+                                                                var fb_url = document.querySelectorAll('[title="Προφίλ"]')[0].href
+                                                            }
+                                                            fb_url = fb_url.replace(/\//g, "-");
+                                                            // console.log("11 -->  "+fb_url);
+                                                            var text_not = 'Posted this sensitive information: ' + x + 'on Facebook';
+                                                            //var text_not = encodeURI(text_not);
+                                                            var data_not = null;
+
+                                                            $.post(host_name + "/api/public/nots", //Required URL of the page on server
+                                                                { // Data Sending With Request To Server
+                                                                    text: text_not,
+                                                                    fb_url: fb_url,
+                                                                    href: "#"
+                                                                },
+                                                                function(response, status) { // Required Callback Function
+                                                                    console.log(response); //"response" receives - whatever written in echo of above PHP script.
+                                                                    // $("#form")[0].reset();
+                                                                });
+
+                                                        }
+                                                    },
+                                                    cancel: {
+                                                        text: 'Dismiss',
+                                                        action: function() {
+                                                            
+                        // last.innerText = 'Παρακαλώ περιμένε!';
+                        // last_btn.style.backgroundColor = 'grey';
+                        // last_btn.style.cursor = "not-allowed";
+                        // last_btn.disabled = true;
+                                                            // document.querySelector('[data-testid="react-composer-post-button"]').innerText = 'Share';
+                                                            // document.querySelector('[data-testid="react-composer-post-button"]').style.backgroundColor = '#4267b2';
+                                                            // document.querySelector('[data-testid="react-composer-post-button"]').disabled = false;
+                                                        }
+                                                    }
+                                                }
+                                            });
+
+                                        }
+
+
+                                    }
+                                });
+
+                                xhr.open("GET", host_name + '/proxy_api/php/sensitive_cors.php?text="' + text_to_check + '"');
+                                xhr.setRequestHeader("cache-control", "no-cache");
+                                xhr.setRequestHeader("Postman-Token", "d9041343-92bf-4e0f-ba3e-77f34156c5f0");
+
+                                xhr.send(data);
+
+                            }
+
+                        } else {
+                            setTimeout(check, 1000); // check again in a second
+                        }
+                    }
+
+                    check();
+
+
+                }, true);
+ }
+
+
+             });
+
+
+        // Meme Detection
+        function meme() {
+            for (var i = 0; i < document.querySelectorAll('[rel="theater"]').length; i++) {
+                if (document.querySelectorAll('[rel="theater"]')[i].dataset.ploi) {
+                    var fb_url;
+                    if (document.querySelectorAll('[title="Profile"]').length > 0) {
+                        var fb_url = document.querySelectorAll('[title="Profile"]')[0].href
+
+                    } else if (document.querySelectorAll('[title="Προφίλ"]').length > 0) {
+                        var fb_url = document.querySelectorAll('[title="Προφίλ"]')[0].href
+                    }
+                    fb_url = fb_url.replace(/\//g, "-");
+                    // console.log("11 -->  "+fb_url);
+                    // console.log(fb_url);
+                    var img_src = document.querySelectorAll('[rel="theater"]')[i].getElementsByTagName('img')[0].src;
+                    // console.log(img_src);
+
+                    //         console.log(data);
+                    (function(index) { // In this closure : parameters of a function in JS 
+                        // are available only in the function,
+                        // and cannot be changed from outside of it
+                        var xhr = new XMLHttpRequest(); // variables declared in a function in JS
+                        // are available only inside the function
+                        // and cannot be changed from outside of it
+
+                        xhr.upload.onprogress = function(e) {
+
+                        };
+
+                        xhr.onreadystatechange = function(e) {
+                            if (this.readyState === 4) {
+                                var obj = this.responseText;
+                                var json = JSON.parse(obj);
+                                if (json['is_racist'] == true) {
+                                    document.querySelectorAll('[rel="theater"]')[index].getElementsByTagName('img')[0].alt = ''
+                                    document.querySelectorAll('[rel="theater"]')[index].getElementsByTagName('img')[0].alt = 'Cencored By Encase'
+
+                                    document.querySelectorAll('[rel="theater"]')[index].getElementsByTagName('img')[0].src = host_name + '/proxy_api/hateful_racist_meme.jpg';
+                                    document.querySelectorAll('[rel="theater"]')[index].style = 'cursor: default'
+                                    document.querySelectorAll('[rel="theater"]')[index].style = 'pointer-events: none'
+                                    var data = new FormData();
+                                    data.append("text", "ENCASE sensed that a user uploaded a racist meme on Facebook and protected it");
+                                    data.append("fb_url", fb_url);
+                                    data.append("href", "#");
+
+                                    var xhr = new XMLHttpRequest();
+                                    xhr.withCredentials = true;
+
+                                    xhr.addEventListener("readystatechange", function() {
+                                        if (this.readyState === 4) {
+                                            //console.log(this.responseText);
+                                        }
+                                    });
+
+                                    xhr.open("POST", host_name + "/api/public/nots");
+                                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                                    xhr.setRequestHeader("cache-control", "no-cache");
+                                    xhr.setRequestHeader("Postman-Token", "1b62696a-6e30-4198-b773-c7e22c663eb2");
+
+                                    xhr.send(data);
+
+
+                                }
+                            }
+                        };
+                        var data = new FormData();
+                        data.append("fb_url", fb_url);
+                        data.append("img_src", img_src); // `index` has nothing to do with `i`, now:
+                        // if `i` changes outside of the function,
+                        //`index` will not
+                        //         console.log(files[index]); // Don't keep `console.log()` in production code ;-)
+                        xhr.open('POST', host_name + '/proxy_api/php/send_img_fbfeed_to_racistMemeDetection.php');
+                        xhr.send(data);
+                    })(i)
+
+                }
+            }
+        }
+
+        window.addEventListener('scroll', meme); $(document).ready(function() {
+            // we call the function
+            meme();
+        });
+
+        //GET CHAT
+        var refresh_chat = setInterval(function() {
+            if (document.getElementsByClassName('_4tdt').length > 0) {
+                var fb_url;
+                if (document.querySelectorAll('[title="Profile"]').length > 0) {
+                    var fb_url = document.querySelectorAll('[title="Profile"]')[0].href
+
+                } else if (document.querySelectorAll('[title="Προφίλ"]').length > 0) {
+                    var fb_url = document.querySelectorAll('[title="Προφίλ"]')[0].href
+                }
+                fb_url = fb_url.replace(/\//g, "-");
+                // console.log("11 -->  "+fb_url);
+
+                //case_id
+
+                var case_id = "conv_" + document.getElementsByClassName('clearfix titlebar')[0].querySelector('[data-hover="tooltip"]').href.replace(/\//g, "-").replace(/\?/g, "") + "_" + fb_url;
+                case_id.replace(/(\r\n|\n|\r)/gm, " ").replace(/\?/g, "");
+                //console.log(case_id);
+                //Type
+                var type = "chat";
+                //console.log(type);
+                //From To Date
+                var j = 0
+                for (j; j < document.getElementsByClassName('_5w-5').length; j++) {}
+                var from_date = document.getElementsByClassName('_5w-5')[0].innerText;
+                //console.log(from_date);
+                var to_date = document.getElementsByClassName('_5w-5')[j - 1].innerText;
+                //console.log(to_date);
+                //Chat text
+                var text_array = [];
+                for (var i = 0; i < document.getElementsByClassName('_4tdt').length; i++) {
+                    if (document.getElementsByClassName('_4tdt')[i].className == '_4tdt _ua0') {
+
+                        text_array.push("Child: " + document.getElementsByClassName('_4tdt')[i].innerText.replace(/(\r\n|\n|\r)/gm, ""));
+                    }
+                    if (document.getElementsByClassName('_4tdt')[i].className == '_4tdt _ua1') {
+
+                        text_array.push("Predator: " + document.getElementsByClassName('_4tdt')[i].innerText.replace(/(\r\n|\n|\r)/gm, ""));
+                    }
+                }
+                var text_chat = text_array.toString();
+                //        console.log(text_chat);
+                if (text_chat.includes("@@@@@@") === true) {
+		   document.getElementById("avatar").style.display="block";
+                    document.getElementById("speech_bubble_text").innerText = 'Ο '+ document.getElementsByClassName('clearfix titlebar')[0].textContent.replace("Active now", " ")+' Πιθανόν να είναι Cyberbully ! Πρόσεχε σε παρακαλώ!!';
+
+                    clearInterval(refresh_chat);
+
+                }
+                // date created 
+                var date_created = new Date();
+                var dd = date_created.getDate();
+                var mm = date_created.getMonth() + 1; //January is 0!
+
+                var yyyy = date_created.getFullYear();
+                if (dd < 10) {
+                    dd = '0' + dd;
+                }
+                if (mm < 10) {
+                    mm = '0' + mm;
+                }
+                var date_created = dd + '-' + mm + '-' + yyyy;
+                //console.log(date_created);
+
+
+                //console.log(fb_url);
+                var fb_sender_name = document.getElementsByClassName('clearfix titlebar')[0].innerText.replace(/(\r\n|\n|\r)/gm, "");
+                //console.log(fb_sender_name);
+
+
+                var data = new FormData();
+                data.append("case_id", case_id);
+                data.append("type", type);
+                data.append("from_date", from_date);
+                data.append("to_date", "to_date");
+                data.append("text_chat", text_chat);
+                data.append("date_created", date_created);
+                data.append("fb_url", fb_url);
+                data.append("fb_sender_name", fb_sender_name);
+
+                var xhr = new XMLHttpRequest();
+                //xhr.withCredentials = false;
+
+                xhr.addEventListener("readystatechange", function() {
+                    if (this.readyState === 4) {
+                        console.log(this.responseText);
+                    }
+                });
+
+                xhr.open("POST", host_name + "/proxy_api/php/datafromfbtomongo.php");
+                xhr.setRequestHeader("cache-control", "no-cache");
+                xhr.setRequestHeader("Postman-Token", "f7a59c06-97a2-4deb-8423-12de3d4226ce");
+
+                xhr.send(data);
+
+            }
+
+        }, 6000);

@@ -1,0 +1,7 @@
+DirectoryIndex en/index.php
+Options -Indexes
+
+RewriteEngine On
+RewriteBase / 
+
+RewriteRule ^chat/child/([^/.]+)$ chat.php?childid=$1

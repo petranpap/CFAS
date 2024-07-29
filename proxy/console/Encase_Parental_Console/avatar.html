@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///home/petran/Downloads/Project.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <title>Encase_TEST</title>
+<link rel='stylesheet' type='text/css' href='"+js_vars+"gr/avatar.css'>
+<style type="text/css">
+  
+.circular {
+  position: relative;
+  font-family: arial;
+  font-size: 1.1em;
+  background: blue;
+  color: #fff;
+  border-radius: 50%;
+  padding: 50px 70px;
+  max-width: 300px;
+}
+.circular1 {
+  background: blue;
+  width: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+}
+.circular2 {
+  background: blue;
+  width: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: -35px;
+}
+.speech-bubble {
+  position: relative;
+  background: #4267b2;
+  border-radius: .4em;
+  width: 160%;
+    height: auto;
+    min-height: 50%;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 47px solid transparent;
+  border-right-color: #4267b2;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -23.5px;
+  margin-left: -47px;
+}
+#speech_bubble_text{
+  padding: 5%;
+    color: white;
+}
+</style>  
+  </head>
+  <body>
+
+    <script>
+      $(window).on('load', function() {
+ if( (window.location.href.indexOf("encase-proxy") > -1)||(window.location.href.indexOf("encase-backend"))) {
+//return false;
+
+    }
+        
+        var fb_url;
+//         if(document.querySelectorAll('[title="Profile"]').length >0){
+// var fb_url = document.querySelectorAll('[title="Profile"]')[0].href
+
+// }else if(document.querySelectorAll('[title="Προφίλ"]').length >0){
+// var fb_url = document.querySelectorAll('[title="Προφίλ"]')[0].href
+// }
+//      fb_url = fb_url.replace(/\//g, "-");
+      fb_url ='https%3A--www.facebook.com-peter.encase';
+function insertAfter(el, referenceNode) {
+    referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
+}
+// Main Gurdian Avatar Div
+ var body = document.getElementsByTagName('body')[0],
+ gavatar = document.createElement("div");
+ gavatar.style.position="fixed";
+gavatar.style.top="55";
+gavatar.style.zIndex="10000";
+gavatar.style.width="150px";
+gavatar.style.height="150px";
+gavatar.id = 'gavatar';  //add an id
+ body.insertBefore(gavatar,body.firstChild) //insert it
+      //Create the avatar Div
+      var gavatar = document.getElementById("gavatar"),
+            avatar = document.createElement("div"); //create a div
+                avatar.style.position="fixed";
+                avatar.style.top="55%";
+                // avatar.style.right="0";
+                avatar.style.zIndex="10000";
+                avatar.style.width="150px";
+                avatar.style.height="150px";
+                avatar.style.marginLeft="100px";
+                avatar.id = 'avatar';  //add an id
+                  gavatar.insertBefore(avatar,gavatar.firstChild) //insert it
+                  
+// Create the bubble
+var avatar = document.getElementById("avatar"),
+speech_bubble=document.createElement("hgroup");
+speech_bubble.className="speech-bubble";
+speech_bubble.id="speech-bubble";
+avatar.insertBefore(speech_bubble,avatar.firstChild);
+// Create the text inside the bubble
+var speech_bubble = document.getElementsByClassName("speech-bubble")[0];
+speech_bubble_text = document.createElement("p");
+speech_bubble_text.id="speech_bubble_text";
+speech_bubble_text.innerText="";
+speech_bubble.insertBefore(speech_bubble_text,speech_bubble.firstChild);
+
+  
+      //     // cREATE THE CLOSE BUTTON
+          var speech_bubble = document.getElementsByClassName("speech-bubble")[0],
+        spanavatar = document.createElement("button");
+        spanavatar.className="close_avatartxt";
+        spanavatar.style.cursor="pointer";
+        spanavatar.style.position="absolute";
+        spanavatar.style.background="white";
+        spanavatar.style.fontSize="medium";
+        spanavatar.style.marginTop="-11px";
+                spanavatar.innerText="OK !";
+        insertAfter(spanavatar, speech_bubble_text);
+
+        // avatar.insertBefore(spanavatar,avatar.firstChild)
+  
+      // Avatar Image
+      var avatar = document.getElementById("avatar");
+    avatarimg = document.createElement("IMG"); //create a div
+        avatarimg.setAttribute("src", "https://encase-proxy.socialcomputing.eu:8090/proxy_api/avatar_module/avatars/selectedavatar/avatar.png");
+        avatarimg.setAttribute("alt", "avatarimg");   
+              avatarimg.style.position="fixed";
+              // avatarimg.style.right="0";
+              avatarimg.style.zIndex="10000";
+              avatarimg.style.width="50px";
+              avatarimg.style.height="50px";
+              avatarimg.style.top="68%";
+              avatarimg.style.background="#c0c0c0";
+              avatarimg.style.cursor = "cell";
+              avatarimg.style.border="1px solid black";
+              avatarimg.style.borderRadius="50%";
+              avatarimg.id = 'avatarimg';  //add an id
+    
+insertAfter(avatarimg, avatar);
+document.getElementById("avatarimg").addEventListener("click", multiple_avatar);
+
+document.getElementsByClassName("close_avatartxt")[0].addEventListener("click",close_ballon_text);
+
+      function close_appear_ballon_text() {
+        var x = document.getElementById("speech-bubble");
+        if (x.style.display == "none") {
+          x.style.display = "block";
+        } 
+        else {
+          x.style.display = "none";
+        }
+      }
+      
+      function multiple_avatar(){
+        
+        if (document.getElementsByClassName("cyberavatar").length<3){
+          // close_ballon_text();
+          var x =document.getElementById("avatar");
+           if (x.style.display == "none") {
+          x.style.display = "block";
+        } 
+        // Settings IMG
+        var avatar_img = document.getElementById('avatarimg');
+        var avatar_img1 = document.createElement("IMG"); //create a div
+        avatar_img1.setAttribute("src", "https://encase-proxy.socialcomputing.eu:8090/proxy_api/avatar_module/images/settings.png");
+        avatar_img1.setAttribute("alt", "avatarimg"); 
+        avatar_img1.style.display="block";  
+        avatar_img1.style.position="fixed";
+        // avatar_img1.style.right="0";
+        avatar_img1.style.zIndex="10000";
+        avatar_img1.style.width="50px";
+        avatar_img1.style.height="50px";
+        avatar_img1.style.top="39%";
+        avatar_img1.style.background="#c0c0c0";
+        avatar_img1.style.borderRadius="50%";
+        avatar_img1.style.cursor = "cell";
+        // avatar_img1.style.border="1px solid black";
+        avatar_img1.style.transition = "all 2s";
+        avatar_img1.onclick = function() {
+    window.open('https://encase-proxy.socialcomputing.eu:8090/proxy_api/avatar_module/gr/options/index.php?fb_url='+fb_url, '_blank');
+};
+        avatar_img1.id = 'avatarimg1';  //add an id
+        avatar_img1.classList.add("cyberavatar");
+        insertAfter(avatar_img1, avatar_img);
+//        document.body.appendChild(avatar_img1);
+        
+        // Notifications IMG
+        var avatar_img1 = document.getElementById('avatarimg1');
+        var avatar_img2 = document.createElement("IMG"); //create a div
+        avatar_img2.setAttribute("src", "https://encase-proxy.socialcomputing.eu:8090/proxy_api/avatar_module/images/notification-bell.png");
+        avatar_img2.setAttribute("alt", "avatarimg"); 
+        avatar_img2.style.display="block";    
+        avatar_img2.style.position="fixed";
+        // avatar_img2.style.right="0";
+        avatar_img2.style.zIndex="10000";
+        avatar_img2.style.width="50px";
+        avatar_img2.style.height="50px";
+        avatar_img2.style.top="49%";
+        avatar_img2.style.background="#c0c0c0";
+        avatar_img2.style.borderRadius="50%";
+        avatar_img2.style.cursor = "cell";
+        // avatar_img2.style.border="1px solid black";
+        avatar_img2.style.transition = "all 2s";
+          avatar_img2.onclick = function() {
+    window.open('https://encase-proxy.socialcomputing.eu:8090/proxy_api/avatar_module/gr/notifications/index.php?fb_url='+fb_url, '_blank');
+};
+        avatar_img2.id = 'avatarimg2';  //add an id
+        avatar_img2.classList.add("cyberavatar");
+        insertAfter(avatar_img2, avatar_img);
+//        document.body.appendChild(avatar_img2);
+        
+        // Info IMG
+        var avatar_img2 = document.getElementById('avatarimg2');
+        var avatar_img3 = document.createElement("IMG"); //create a div
+        avatar_img3.setAttribute("src", "https://encase-proxy.socialcomputing.eu:8090/proxy_api/avatar_module/images/informations.png");
+        avatar_img3.setAttribute("alt", "avatarimg");   
+        avatar_img3.style.display="block";  
+        avatar_img3.style.position="fixed";
+        // avatar_img3.style.right="0";
+        avatar_img3.style.zIndex="10000";
+        avatar_img3.style.width="50px";
+        avatar_img3.style.height="50px";
+        avatar_img3.style.top="59%";
+        avatar_img3.style.cursor = "cell";
+        avatar_img3.style.background="#c0c0c0";
+        avatar_img3.style.borderRadius="50%";
+        // avatar_img3.style.border="1px solid black";
+        avatar_img3.style.transitionDelay = "15s";
+         avatar_img3.onclick = function() {
+    window.open('https://encase.socialcomputing.eu/', '_blank');
+};
+        avatar_img3.id = 'avatarimg3';  //add an id
+        avatar_img3.classList.add("cyberavatar");
+        insertAfter(avatar_img3, avatar_img2);
+        //document.body.appendChild(avatar_img3);
+      }else{
+        Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}
+
+document.getElementsByClassName("cyberavatar").remove();
+      }
+        
+      }
+      function close_ballon_text() {
+        var x =document.getElementById("avatar");
+           if (x.style.display == "none") {
+          x.style.display = "block";
+        } 
+        else {
+          x.style.display = "none";
+        }
+if(document.getElementById("speech_bubble_text").innerText===""){
+document.getElementById("avatar").style.display="none"
+}
+      } 
+      // Get Behaviors from mongo
+        function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+function get_twitter_behavior() {
+//  readTextFile("/var/www/html/console/Encase_Parental_Console/file.txt");
+
+
+
+    // var data = null;
+
+    // var xhr = new XMLHttpRequest();
+    // xhr.withCredentials = true;
+
+    // xhr.addEventListener("readystatechange", function () {
+    //     if (this.readyState === 4) {
+    //         var json_behavior = JSON.parse(this.responseText);
+    //         var json_data_behavior = json_behavior["Twitter_Names"];
+    //         // console.log(json_behavior);
+
+    //         for (var i = 0; i < json_data_behavior.length; i++) {
+    //             document.getElementById('speech_bubble_text').innerText='Το Cybersafety Family Advice Suite θεωρεί ότι ο λογαριασμός :'+json_data_behavior[i]["screen_name"] + ' στο Twitter είναι ' + json_data_behavior[i]["behavior"];
+               
+    //             update_twitter_behavior(json_data_behavior[i]["_id"]["$oid"]);
+
+    //         }
+    //     }
+    // });
+
+    // xhr.open("GET", "https://encase-proxy.socialcomputing.eu/dal/ObtainData/twitter/0");
+    // xhr.setRequestHeader("cache-control", "no-cache");
+    // xhr.setRequestHeader("postman-token", "05294539-31ed-9bca-7d49-9568858b5195");
+
+    // xhr.send(data);
+}
+
+function get_twitter_fake() {
+
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+            var json_fake = JSON.parse(this.responseText);
+            var json_data_fake = json_fake["Twitter_Names"];
+
+            for (var i = 0; i < json_data_fake.length; i++) {
+              document.getElementById('speech_bubble_text').innerText='Το Cybersafety Family Advice Suite θεωρεί ότι ο λογαριασμός :'+json_data_fake[i]["screen_name"] + ' στο Twitter είναι ' +  json_data_fake[i]["fake_account"];
+
+                    update_twitter_fake(json_data_fake[i]["_id"]["$oid"]);
+
+
+            }
+        }
+    });
+
+xhr.open("GET", "https://encase-proxy.socialcomputing.eu/dal/ObtainData/twitter_fakeaccounts/0");
+xhr.setRequestHeader("cache-control", "no-cache");
+xhr.setRequestHeader("postman-token", "6e2b3d0d-447b-e6e3-0268-524de9ebcbdb");
+
+    xhr.send(data);
+}
+
+
+function get_chat_sexual() {
+
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function() {
+        if (this.readyState === 4) {
+            var json = JSON.parse(this.responseText);
+            var json_data = json["Chat_Logs"];
+            for (var i = 0; i < json_data.length; i++) {
+                if (json_data[i]["read_sexual"] !== 1) {
+                   document.getElementById('speech_bubble_text').innerText='Ανέλυσα την συνομιλία που είχες με τον :'+json_data[i]["fb_sender_name"] + ' στο Facebook και νομίζω ότι ίσως η συνομιλία να περιέχει σεξουαλική παρενόχληση σε ποσοστό ' +  json_data[i]["sexual_detection_percent"];
+
+
+                    update_chat_sexual(json_data[i]["_id"]["$oid"]);
+
+                }
+            }
+        }
+    });
+
+    xhr.open("GET", "https://encase-proxy.socialcomputing.eu/dal/ObtainData/chat/sexualread/0");
+    xhr.setRequestHeader("cache-control", "no-cache");
+    xhr.setRequestHeader("postman-token", "05294539-31ed-9bca-7d49-9568858b5195");
+
+    xhr.send(data);
+}
+
+function get_chat_cyber() {
+
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function() {
+        if (this.readyState === 4) {
+            var json = JSON.parse(this.responseText);
+            var json_data = json["Chat_Logs"];
+
+            for (var i = 0; i < json_data.length; i++) {
+                if (json_data[i]["read_cyberbull"] !== 1) {
+                    // console.log('http://35.205.100.70:18082/dal/UpdateTwitterRead/' + json_data[i]["_id"]["$oid"]);
+                    // console.log(json_data[i]);
+                    document.getElementById('speech_bubble_text').innerText='Ανέλυσα την συνομιλία που είχες με τον :'+json_data[i]["fb_sender_name"] + ' στο Facebook και νομίζω ότι ίσως είναι cyberbully';
+
+                    update_chat_cyber(json_data[i]["_id"]["$oid"]);
+
+                }
+            }
+        }
+    });
+
+    xhr.open("GET", "https://encase-proxy.socialcomputing.eu/dal/ObtainData/chat/cyberread/0");
+    xhr.setRequestHeader("cache-control", "no-cache");
+    xhr.setRequestHeader("postman-token", "05294539-31ed-9bca-7d49-9568858b5195");
+
+    xhr.send(data);
+}
+
+function update_twitter_behavior(_id) {
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+            console.log(this.responseText);
+        }
+    });
+
+    xhr.open("PUT", "https://encase-proxy.socialcomputing.eu/dal/UpdateTwitterRead/" + _id);
+    xhr.setRequestHeader("cache-control", "no-cache");
+    xhr.setRequestHeader("postman-token", "79fd8356-1311-4e48-47ef-33b61fb7bbb2");
+
+    xhr.send(data);
+
+}
+function update_twitter_fake(_id) {
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+            console.log(this.responseText);
+        }
+    });
+
+    xhr.open("PUT", "https://encase-proxy.socialcomputing.eu/dal/UpdateTwitterFakeRead/" + _id);
+    xhr.setRequestHeader("cache-control", "no-cache");
+    xhr.setRequestHeader("postman-token", "79fd8356-1311-4e48-47ef-33b61fb7bbb2");
+
+    xhr.send(data);
+
+}
+
+function update_chat_sexual(_id) {
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function() {
+        if (this.readyState === 4) {
+            console.log(this.responseText);
+        }
+    });
+
+    xhr.open("PUT", "https://encase-proxy.socialcomputing.eu/dal/UpdateChatSexualRead/" + _id);
+    xhr.setRequestHeader("cache-control", "no-cache");
+    xhr.setRequestHeader("postman-token", "79fd8356-1311-4e48-47ef-33b61fb7bbb2");
+
+    xhr.send(data);
+
+}
+
+function update_chat_cyber(_id) {
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function() {
+        if (this.readyState === 4) {
+            console.log(this.responseText);
+        }
+    });
+
+    xhr.open("PUT", "https://encase-proxy.socialcomputing.eu/dal/UpdateChatCyberRead/" + _id);
+    xhr.setRequestHeader("cache-control", "no-cache");
+    xhr.setRequestHeader("postman-token", "79fd8356-1311-4e48-47ef-33b61fb7bbb2");
+
+    xhr.send(data);
+
+}
+
+
+      // End Behaviors
+
+var interval = 0; // The display interval, in minutes.
+  setInterval(function() {
+    interval++;
+    // if (
+    //   JSON.parse(localStorage.isActivated) &&
+    //     localStorage.frequency <= interval
+    // ) {
+//         get_twitter_behavior();
+//         setTimeout(function(){ get_twitter_fake(); }, 3000);
+            
+//            get_chat_cyber();
+//            setTimeout(function(){ get_chat_sexual(); }, 3000);
+            
+            interval = 0;
+    // }
+  }, 6000);
+
+setTimeout(function() {
+ 
+document.getElementById("avatar").style.display="none"
+
+
+    }, 10000);
+
+
+$('#avatarimg').click(function() { 
+              if(document.getElementById("speech_bubble_text").innerText===""){
+document.getElementById("avatar").style.display="none"
+}
+            }); 
+if(document.getElementById("speech_bubble_text").innerText===""){
+document.getElementById("avatar").style.display="none"
+}
+
+
+    });
+    </script>
+  
+
+ </body></html>

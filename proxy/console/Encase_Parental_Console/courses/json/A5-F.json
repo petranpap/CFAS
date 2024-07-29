@@ -1,0 +1,59 @@
+{
+    "module_no": "A5",
+    "title": "Fake profiles, Fraud and Phishing",
+    "level": "foundation",
+    "prerequisites": [
+        "A1-foundation"
+    ],
+    "learning_objectives": [
+        "Learn to identify fake profiles, online fraud, and fishing",
+        "Understand the intentions of these malicious practices",
+        "Learn to report fake profiles, fraud or phishing"
+    ],
+    "main_messages": [
+        "Fake activities online are illegal",
+        "Be careful and critical when being online",
+        "Report and block such profiles or actions"
+    ],
+    "questions": [
+        "What is a fake profile, and how malicious users can use it?",
+        "What is phishing?",
+        "What experiences do they have with these incidents?"
+    ],
+    "practical_examples": [
+        {
+            "text": "What Is Phishing? Examples and Phishing Quiz - Cisco",
+            "link": "https://www.cisco.com/c/en/us/products/security/email-security/what-is-phishing.html#~phishing-awareness-quiz"
+        },
+        {
+            "text": "Phishing Statistics (Updated 2022) - 50+ Important Phishing Stats - Tessian",
+            "link": "https://www.tessian.com/blog/phishing-statistics-2020/"
+        },
+        {
+            "text": "Fake Instagram Account Generator",
+            "link": "https://generatestatus.com/fake-instagram-account-maker/"
+        },
+        {
+            "text": "Random Person Generator | User Identity, Account and Profile Generator",
+            "link": "https://www.fakepersongenerator.com/"
+        }
+    ],
+    "resources": [
+        {
+            "text": "6 social media scams to avoid in 2022, plus red flags | Norton",
+            "link": "https://us.norton.com/internetsecurity-online-scams-social-media-scams.html"
+        },
+        {
+            "text": "10 Social Media Scams and How to Spot Them - Panda Security Mediacenter",
+            "link": "https://www.pandasecurity.com/en/mediacenter/panda-security/social-media-scams/"
+        },
+        {
+            "text": "What Is Phishing? Examples and Phishing Quiz - Cisco",
+            "link": "https://www.cisco.com/c/en/us/products/security/email-security/what-is-phishing.html"
+        },
+        {
+            "text": "Fake Profiles - Student - ISEA",
+            "link": "https://infosecawareness.in/concept/student/fake-profiles"
+        }
+    ]
+}

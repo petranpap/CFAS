@@ -1,0 +1,65 @@
+{
+    "module_no": "A4",
+    "title": "Hate speech",
+    "level": "foundation",
+    "prerequisites": [],
+    "learning_objectives": [
+        "Learn to recognize hate speech",
+        "Understand the impact of hate speech",
+        "Learn ways to get away from hate speech"
+    ],
+    "main_messages": [
+        "Hate speech can lead to extreme actions",
+        "You can help take hate speech content down by reporting and blocking actions",
+        "Be critical before you post or comment, try not to generate hate speech"
+    ],
+    "questions": [
+        "Where hate speech can be found online?",
+        "At what level do they feel exposed to such content?",
+        "How do they react to such content?"
+    ],
+    "practical_examples": [
+        {
+            "text": "Facing Facts: What is hate speech?",
+            "link": "https://www.youtube.com/watch?v=n7p1l2mU-t8&ab_channel=FacingFacts"
+        },
+        {
+            "text": "STARTING POINTS FOR COMBATING HATE SPEECH ONLINE",
+            "link": "https://www.researchgate.net/deref/https%3A%2F%2Frm.coe.int%2F1680665ba7"
+        },
+        {
+            "text": "The Datafication of Hate: Expectations and Challenges in Automated Hate Speech Monitoring",
+            "link": "https://www.frontiersin.org/articles/10.3389/fdata.2020.00003/full"
+        }
+    ],
+    "resources": [
+        {
+            "text": "What is Freedom of Expression and what is hate speech?",
+            "link": "https://www.youtube.com/watch?v=BZBP8JZOLSU&ab_channel=CivicsAcademySA"
+        },
+        {
+            "text": "How to Recognize Online Hate Speech",
+            "link": "https://www.youtube.com/watch?v=on-_y1yOnn4&ab_channel=SofiaDA"
+        },
+        {
+            "text": "Teen Voices: Hate Speech Online",
+            "link": "https://www.youtube.com/watch?v=8vUdWpwLv10&ab_channel=CommonSenseEducation"
+        },
+        {
+            "text": "Hate speech has ability to alter our minds, faiths, convictions and compel us to reject rule of lawe",
+            "link": "https://www.nationalheraldindia.com/india/hate-speech-has-ability-to-alter-our-minds-faiths-convictions-and-compel-us-to-reject-rule-of-law"
+        },
+        {
+            "text": "What Is Hate Speech? We Asked College Students",
+            "link": "https://www.youtube.com/watch?v=skuLK0YpksI"
+        },
+        {
+            "text": "Hate Speech - Survey example 175",
+            "link": "https://www.surveymonkey.com/r/6L3BZWN"
+        },
+        {
+            "text": "Hate Speech - Survey example 276",
+            "link": "https://www.surveymonkey.com/r/QJLTYG8"
+        }
+    ]
+}

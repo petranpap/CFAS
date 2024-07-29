@@ -1,0 +1,113 @@
+<?php
+session_start();
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+include('../../../../variable_settings/vars.php');
+$fb_url= $_GET['fb_url'];
+$json = file_get_contents('https://backendencase.cut.ac.cy:18085/dal/GetChildGroups/'.$fb_url,false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
+//echo $fb_url;
+if(isset($_POST['SubmitButton'])){ //check if form was submitted
+
+$imagePath = $_POST['inputText'];
+$newPath = "../../avatars/selectedavatar/";
+$ext = '.png';
+$newName  = $newPath."avatar".$ext;
+$copied = copy($imagePath , $newName);
+
+if ((!$copied)) 
+{
+echo $imagePath;
+    echo "Error : Not Copied";
+}else{
+}
+}    
+
+
+// Quiz
+
+// Mock database connection (replace with your actual connection)
+require_once 'db_setup.php';
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Retrieve available quizzes from the database (replace with actual SQL query)
+$sql = "SELECT * FROM quizzes";
+$result = $conn->query($sql);
+$quiz_data = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $quiz_data[] = $row;
+    }
+}
+
+// Handle quiz submission
+if (isset($_POST['submit_quiz'])) {
+
+    // Store student's answers in session
+    $_SESSION['student_answers'] = $_POST['answers'];
+ //    // Redirect to show the correct answers
+   $quiz_id = $_POST['quiz_id'];
+   $_SESSION['quiz_id'] =  $_POST['quiz_id'];
+ // header("Location: student.php?quiz_id=" . $quiz_id . "&show_answers=true");
+
+        echo "<script> window.location.href = window.location.pathname+'?quiz_id=" . $quiz_id . "&show_answers=true'</script>";
+
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>Options page - <?= $fb_url ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+
+button#save_groups {
+    background-color: green;
+    border-color: green;
+    width: 200pt;
+}
+button.btn.btn-danger.delete-row {
+    width: 200pt;
+}
+
+input{
+margin-bottom: 5%;
+}
+input[type=button]{
+width:300pt;}
+
+::placeholder{
+  color: blue;
+    font-style: italic;
+    font-size: x-small;
+}
+.center{
+  text-align:center;
+}
+.forms_style{
+
+    padding-left: 20%;
+    padding-right: 20%; 
+}
+
+.selected{
+ border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+}
+      body{
+    background:#eee;    
+}
+

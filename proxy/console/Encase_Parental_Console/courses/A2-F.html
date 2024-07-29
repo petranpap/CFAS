@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+
+        }
+        .header > * {
+            width: calc(100% / 2);
+        }
+
+        .header-image {
+width: 100px;
+    height: auto;
+    margin-right: 20px;
+    padding-left: 40px;
+    float: left;
+        }
+        .header-title {
+font-size: 24px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    float: right;
+    flex-direction: row;
+        }
+        .container {
+            display: flex;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+
+        .menu {
+            
+            background-color: #c6d9f1;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            overflow-y: auto;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            display: none;
+            overflow-y: auto;
+        }
+        .content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+    text-align: center;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 350px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+
+                .menu-button {
+            display: block;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 5px 0;
+            color: #fff;
+            cursor: pointer;
+        }
+        .menu-button-prerequisites {
+            background-color: #3498db;
+        }
+        .menu-button-learning-objectives {
+            background-color: #e74c3c;
+        }
+        .menu-button-main-messages {
+            background-color: #27ae60;
+        }
+        .menu-button-questions {
+            background-color: #f1c40f;
+        }
+        .menu-button-practical-example {
+            background-color: #9b59b6;
+        }
+        .menu-button-resources {
+            background-color: #e67e22;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js'></script><script src='https://proxyencase.cut.ac.cy:8090/proxy_api/js/vars.js'></script><script> var fb_url='https:--www.facebook.com-peter.encase';</script><script src='https://proxyencase.cut.ac.cy:8090/proxy_api/js/gr/avatar.js'></script><link rel='stylesheet' type='text/css' href='https://proxyencase.cut.ac.cy:8090/proxy_api/js/gr/avatar.css'></head>
+<body>
+    <div class="header">                
+        
+<img class="header-image" src="https://proxyencase.cut.ac.cy:8090/proxy_api/avatar_module/en/edu/cybersafety.jpg" alt="Header Image">
+         <h2 class="header-title">A2. Cyberbullying and Sexual Harassment-Foundation</h2>
+    </div>
+    <div class="container">
+
+        <div class="menu">
+            <h3>Sections</h3>
+            <ul>
+                <li><a href="#prerequisites" class="menu-button menu-button-prerequisites">Prerequisites</a></li>
+                <li><a href="#learning-objectives" class="menu-button menu-button-learning-objectives">Learning Objectives</a></li>
+                <li><a href="#main-messages" class="menu-button menu-button-main-messages">Main Messages</a></li>
+                <li><a href="#questions" class="menu-button menu-button-questions">Example Questions</a></li>
+                <li><a href="#practical-example" class="menu-button menu-button-practical-example">Practical Example</a></li>
+                <li><a href="#resources" class="menu-button menu-button-resources">Resources</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </div>
+        <div class="content ">
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="prerequisites" class="content active">
+        <h2>Prerequisites</h2>
+        <p>A1-F</p>
+    </div>
+    <div id="learning-objectives" class="content">
+        <h2>Learning Objectives (LO)</h2>
+        <ul>
+            <li>LO1: Learn to detect signs of cyberbullying and online sexual harassment</li>
+            <li>LO2: Understand the importance of reporting such incidences to a trusted adult</li>
+            <li>LO3: Learn how to support the victim and not the predator</li>
+        </ul>
+    </div>
+    <div id="main-messages" class="content">
+        <h2>Main Messages (M)</h2>
+        <ul>
+            <li>M1: No cyberbullying or sexual harassment is accepted</li>
+            <li>M2: Cyberbully and Sexual Harassment are illegal</li>
+            <li>M3: It is not a shame to report being a victim of cyberbullying or sexual harassment</li>
+        </ul>
+    </div>
+    <div id="questions" class="content">
+        <h2>Example Questions (Q)</h2>
+        <ul>
+            <li>Q1: What is cyberbullying?</li>
+            <li>Q2: What is sexual harassment?</li>
+            <li>Q3: Share experiences they had or heard about</li>
+        </ul>
+    </div>
+    <div id="practical-example" class="content">
+        <h2>Practical Example (P)</h2>
+        <ul>
+            <li>P1: Sexual harassment: <br> 
+		- <a href="https://www.youtube.com/watch?v=GOsgQbmvuUQ&ab_channel=ThinkUKnowAUS" target="_blank">Emily's Story - Online Grooming</a> <br> 
+		- <a href="https://www.youtube.com/watch?v=CEivufW2IWs&ab_channel=FightChildAbuse" target="_blank">Online Sexual Abuse Can Happen</a> <br> 
+	   </li>
+	     <li>P2: Cyberbullying: <br>
+	      - <a href='https://www.youtube.com/watch?v=vtfMzmkYp9E&ab_channel=StopBullyingGov' target='_blank'>Is it Cyberbullying?</a> <br>
+	      - <a href='https://dataprot.net/statistics/cyberbullying-statistics/' target='_blank'>Heart-Breaking Cyberbullying Statistics for 2022</a>
+	    </li>
+	     <li>P3: Movies: Bully; Audrie and Daisy (16+); Submit the documentary</li>
+        </ul>
+    </div>
+    <div id="resources" class="content">
+        <h2>Resources [Links]</h2>
+        <ul>
+            - <a href="https://www.europarl.europa.eu/RegData/etudes/STUD/2016/571367/IPOL_STU(2016)571367_EN.pdf" target='_blank'>Cyberbullying among young people</a><br>
+
+            - <a href="https://www.childnet.com/resources/step-up-speak-up/teaching-toolkit/quiz/" target='_blank'>Quiz for cyberbullying</a><br>
+
+            - <a href="https://www.childline.org.uk/info-advice/bullying-abuse-safety/types-bullying/" target='_blank'>Bullying and advice on coping and making it stop</a><br>
+
+            - <a href="https://www.iberdrola.com/social-commitment/cyberbullying-definition-effects-and-solutions" target='_blank'>What is Cyberbullying, its bad effects and how to stop it</a><br>
+
+
+            - <a href="https://www.childnet.com/resources/step-up-speak-up/teaching-toolkit/films/" target='_blank'> Peer to peer sexual harassment</a><br>
+
+	    - <a href="https://www.childnet.com/resources/step-up-speak-up/teaching-toolkit/step-up-speak-up-lesson-plans/" target='_blank'>Lesson Plans to address sexual harassment</a><br>
+	
+	    - <a href="https://www.youtube.com/watch?v=RnKlo0EjAqc&ab_channel=SBSDateline" target='_blank'>Digital Predators | Full Episode | Dateline</a><br>
+
+	 - <a href="https://www.infosecawareness.in/concept/children/online-predators" target='_blank'>Online Predators</a><br>
+
+	- <a href="https://www.youtube.com/watch?v=RVSAFhTjAdc" target='_blank'>Bad Behavior Online: Bullying, Trolling & Free Speech | Off Book | PBS Digital
+Studios</a><br>
+        </ul>
+
+
+    </div>
+
+    <!-- JavaScript to handle menu transitions -->
+    <script>
+        const menuLinks = document.querySelectorAll('.menu a');
+        const contentSections = document.querySelectorAll('.content');
+
+        menuLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                // Hide all content sections
+                contentSections.forEach((section) => {
+                    section.classList.remove('active');
+                });
+
+                // Show the selected content section
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersafety Module</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+
+        }
+        .header > * {
+            width: calc(100% / 2);
+        }
+
+        .header-image {
+            width: 100px; /* Adjust the image width as needed */
+            height: auto;
+            margin-right: 20px;
+padding-left: 40px;
+            float: left;
+        }
+        .header-title {
+font-size: 24px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    float: right;
+    flex-direction: row;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            align-items: center;
+    justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+
+        .menu {
+            
+            background-color: #c6d9f1;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            overflow-y: auto;
+        }
+        .content {
+            width: 70%;
+            padding: 20px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            display: none;
+            overflow-y: auto;
+        }
+        .content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+    text-align: center;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 350px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+
+                .menu-button {
+            display: block;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 5px 0;
+            color: #fff;
+            cursor: pointer;
+        }
+        .menu-button-prerequisites {
+            background-color: #3498db;
+        }
+        .menu-button-learning-objectives {
+            background-color: #e74c3c;
+        }
+        .menu-button-main-messages {
+            background-color: #27ae60;
+        }
+        .menu-button-questions {
+            background-color: #f1c40f;
+        }
+        .menu-button-practical-example {
+            background-color: #9b59b6;
+        }
+        .menu-button-resources {
+            background-color: #e67e22;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get('id')
+ // URL of the JSON data
+    var jsonUrl = window.location.origin+'/courses/json/'+id+'.json';
+	console.log(jsonUrl);
+       
+    // Function to fetch JSON data from a URL
+    function fetchJson(url) {
+
+        return fetch(url)
+            .then(response => {
+                console.log(response)
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .catch(error => {
+                console.error('Error fetching JSON:', error);
+            });
+    }
+
+    // Function to create HTML elements based on JSON data
+    function generateHTML(data) {
+        var html = `
+            <div class="header">
+                <img class="header-image" src="https://proxyencase.cut.ac.cy:8090/proxy_api/avatar_module/en/edu/cybersafety.jpg" alt="Header Image">
+                <h2 class="header-title">${data.module_no}. ${data.title}</h2>
+            </div>
+            <div class="container">
+                <div class="menu">
+                    <h3>Sections</h3>
+                    <ul>
+                        <li><a href="#prerequisites" class="menu-button menu-button-prerequisites">Prerequisites</a></li>
+                        <li><a href="#learning-objectives" class="menu-button menu-button-learning-objectives">Learning Objectives</a></li>
+                        <li><a href="#main-messages" class="menu-button menu-button-main-messages">Main Messages</a></li>
+                        <li><a href="#questions" class="menu-button menu-button-questions">Example Questions</a></li>
+                        <li><a href="#practical-example" class="menu-button menu-button-practical-example">Practical Example</a></li>
+                        <li><a href="#resources" class="menu-button menu-button-resources">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="content"></div>`;
+
+        // Add content based on JSON data
+        html += generateSection("prerequisites", "Prerequisites", data.prerequisites);
+        html += generateSection("learning-objectives", "Learning Objectives (LO)", data.learning_objectives);
+        html += generateSection("main-messages", "Main Messages (M)", data.main_messages);
+        html += generateSection("questions", "Example Questions (Q)", data.questions);
+        html += generatePracticalExampleSection("practical-example", "Practical Example (P)", data.practical_examples);
+        html += generateResourcesSection("resources", "Resources [Links]", data.resources);
+
+        // Close container and body tags
+        html += `</div></body></html>`;
+
+        // Display the generated HTML
+        document.body.innerHTML = html;
+    }
+
+    // Function to generate HTML for a section
+    function generateSection(id, title, items) {
+        var html = `<div id="${id}" class="content">
+                        <h2>${title}</h2>`;
+        if (items.length > 0) {
+            html += "<ul>";
+            items.forEach(function (item) {
+                html += `<li>${item}</li>`;
+            });
+            html += "</ul>";
+        } else {
+            html += "<p>---</p>";
+        }
+        html += `</div>`;
+        return html;
+    }
+
+    // Function to generate HTML for the practical example section
+    function generatePracticalExampleSection(id, title, practicalExample) {
+        var html = `<div id="${id}" class="content">
+                        <h2>${title}</h2>`;
+        if (practicalExample.length > 0) {
+            html += "<ul>";
+            practicalExample.forEach(function (example) {
+                html += `<li>${example.text}<ul>`;
+// Check if "links" is an array and not empty
+            if (Array.isArray(example.links) && example.links.length > 0) {
+                html += "<ul>";
+                example.links.forEach(function (link) {
+                    html += `<li><a href="${link.link}">${link.text}</a></li>`;
+                });
+                html += "</ul>";
+            }
+            
+            html += "</li>";
+        });
+        html += "</ul>";
+    } else {
+        html += "<p>---</p>";
+    }
+    html += `</div>`;
+    return html;
+}
+    // Function to generate HTML for the resources section
+    function generateResourcesSection(id, title, resources) {
+        var html = `<div id="${id}" class="content">
+                        <h2>${title}</h2>`;
+        if (resources.length > 0) {
+            html += "<ul>";
+            resources.forEach(function (resource) {
+                html += `<li><a href="${resource.link}">${resource.text}</a></li>`;
+            });
+            html += "</ul>";
+        } else {
+            html += "<p>---</p>";
+        }
+        html += `</div>`;
+        return html;
+    }
+
+    // Call the function with the JSON data
+    // generateHTML(jsonData);
+
+         // Fetch JSON data and generate HTML
+        fetchJson(jsonUrl)
+        .then(data => generateHTML(data));
+//setTimeout(function(){
+//document.getElementById("prerequisites").classList.add("active")
+//}, 100);
+
+
+</script>
+
+
+<script>
+setTimeout(function(){
+           const menuLinks = document.querySelectorAll('.menu a');
+        const contentSections = document.querySelectorAll('.content');
+
+        menuLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                // Hide all content sections
+                contentSections.forEach((section) => {
+                    section.classList.remove('active');
+                });
+
+                // Show the selected content section
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.classList.add('active');
+            });
+        });
+}, 1230);
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Hello World!");
+
+setTimeout(function(){
+document.getElementById("prerequisites").classList.add("active")
+}, 1200);
+});
+</script>
+</body>
+</html>
+
